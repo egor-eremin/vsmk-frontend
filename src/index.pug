@@ -1,0 +1,13 @@
+extends pug/base
+
+append vars
+    - title = "vsmk"
+    - meta.viewport = "width=device-width, initial-scale=1"
+
+block content
+    header.main-header
+        .template-wrapper.header-contacts
+            a(href="tel:83952404061").phone-link 8 (3952) 40-40-61
+            .operation-mode
+                | В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30
+            a(href="#").callback Заказать обратный звонок
