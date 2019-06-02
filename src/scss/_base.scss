@@ -58,11 +58,10 @@ input::-webkit-input-placeholder       {color: $color-placeholder; opacity: 1; t
 input::-moz-placeholder                {color: $color-placeholder; opacity: 1; transition: opacity 0.3s ease;}
 input:-moz-placeholder                 {color: $color-placeholder; opacity: 1; transition: opacity 0.3s ease;}
 input:-ms-input-placeholder            {color: $color-placeholder; opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 html {
 	box-sizing: border-box;
+}
+picture {
+	vertical-align: top;
 }

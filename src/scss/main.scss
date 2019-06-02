@@ -12,4 +12,214 @@ body {
   font-family: $fonts-open-sans;
   font-weight: 400;
   color: $color-main;
+  font-size: 16px;
+  background-color: $color-body;
+}
+.layout-template-wrapper {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+}
+.layout-template-wrapper__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.template-wrapper {
+  max-width: 1126px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 15px;
+}
+.phone-link {
+  font-weight: 600;
+  line-height: 20px;
+  margin-right: 16px;
+}
+.operation-mode,
+.callback-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-light-black;
+  opacity: .9;
+}
+.callback-link {
+  transition: .3s ease;
+  border-bottom: 1px dashed rgba(27,26,31,.3);
+}
+.callback-link:hover {
+  border-bottom-color: rgba(27,26,31,.6);
+}
+.operation-mode {
+  margin-right: 24px;
+}
+.header-menu {
+  background: $color-header;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(25, 22, 38, 0.5), 0 1px 0 0 #4b4c51;
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  position: relative;
+  height: 56px;
+  overflow: hidden;
+}
+.logo-text {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 16px;
+  margin-right: 127px;
+}
+.main-nav__list {
+  display: flex;
+  height: 100%;
+}
+.main-nav__li a {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: .6px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-nav__li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: $color-white;
+  left: 0;
+  bottom: 0;
+  transition: .3s ease;
+  opacity: 0;
+}
+.main-nav__li.active a::after {
+  opacity: 1;
+}
+.main-nav__li a::before {
+  position: absolute;
+  content: '';
+  transition: .3s ease;
+  filter: blur(15px);
+  background-color: #ffd84d;
+  width: 73px;
+  height: 56px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 34px);
+  z-index: 1;
+  opacity: 0;
+}
+.main-nav__li a:hover::before {
+  opacity: 1;
+}
+.header-menu-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 380px;
+  background-color: $color-grey-header-background;
+  z-index: 1;
+}
+.header-menu-background::before {
+  content: '';
+  width: 28px;
+  height: 56px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../images/arrow_menu2.png") no-repeat;
+  background-size: 100%;
+  transform: translate(100%, 0);
+}
+.header-menu-background::after {
+  content: '';
+  width: 36px;
+  height: 56px;
+  position: absolute;
+  background: url("../images/arrow_menu.svg") no-repeat;
+  background-size: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(43px);
+}
+.header-menu__wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.main-logo {
+  margin-left: 29px;
+  margin-right: 20px;
+}
+.main-nav__li {
+  padding: 0 20px;
+}
+.main-nav-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: -4px;
+}
+.main-nav {
+  height: 100%;
+}
+.main-h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.additional-title-text {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+  text-align: center;
+}
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 37px;
+}
+.first-page-img {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 0 $color-constructor-shadow;
+}
+.btn {
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 0 $color-yellow-btn-shadow;
+  background-color: $color-yellow-btn;
+  transition: .3s ease;
+}
+.btn:hover {
+  background-color: $color-yellow-btn-hover;
+}
+.btn-start-constructor {
+  padding: 10px 78px 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 52px;
+}
+.constructor-first-page {
+  position: relative;
+}
+.constructor {
+  margin-bottom: 11px;
 }

@@ -270,8 +270,10 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel="stylesheet" href=`css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
-		block body-start
-		block content
+		.layout-template-wrapper
+			.layout-template-wrapper__inner
+				block body-start
+				block content
 		block scripts
 			script(src=`js/vendor.js?v=${Date.now()}`)
 			script(src=`js/main.js?v=${Date.now()}`)
