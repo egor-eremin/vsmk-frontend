@@ -1,6 +1,9 @@
 import '@babel/polyfill';
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
+import objectFitImages from 'object-fit-images';
+
+objectFitImages();
 
 svg4everybody();
 

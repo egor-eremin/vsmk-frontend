@@ -78,6 +78,9 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/*a:focus {*/
+/*    outline: thin dotted;*/
+/*}*/
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -664,7 +667,9 @@ body {
 
 .main-logo {
   margin-left: 29px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  position: relative;
+  top: 2px; }
 
 .main-nav__li {
   padding: 0 20px; }
@@ -686,7 +691,7 @@ body {
 
 .additional-title-text {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.56;
   max-width: 600px;
   text-align: center; }
 
@@ -718,7 +723,16 @@ body {
   overflow: hidden;
   -webkit-box-shadow: 0 2px 0 0 #dededf;
      -moz-box-shadow: 0 2px 0 0 #dededf;
-          box-shadow: 0 2px 0 0 #dededf; }
+          box-shadow: 0 2px 0 0 #dededf;
+  height: 584px; }
+  .first-page-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    font-family: 'object-fit: cover; object-position: center;'; }
 
 .btn {
   font-weight: 600;
@@ -735,8 +749,12 @@ body {
   -moz-transition: .3s ease;
   transition: .3s ease; }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #ffd02a; }
+
+.btn:focus {
+  outline: none; }
 
 .btn-start-constructor {
   padding: 10px 78px 14px;
@@ -762,7 +780,8 @@ body {
   grid-template: repeat(3, 360px)/repeat(3, -moz-calc((100% - 64px) / 3));
   grid-template: repeat(3, 360px)/repeat(3, calc((100% - 64px) / 3));
   grid-column-gap: 32px;
-  grid-row-gap: 32px; }
+  grid-row-gap: 32px;
+  margin-top: 4px; }
 
 .products-roofing {
   grid-area: 1 / 2 / 2 / 4; }
@@ -772,5 +791,185 @@ body {
 
 .product-selection {
   grid-area: 3 / 1 / 4 / 3; }
+
+.products-list__text {
+  background-color: #fff;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+     -moz-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 22px 24px 22px 16px; }
+
+.products-list__item {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0 0 #dededf;
+     -moz-box-shadow: 0 2px 0 0 #dededf;
+          box-shadow: 0 2px 0 0 #dededf;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.main-h2_small {
+  font-size: 28px;
+  margin-bottom: 16px; }
+
+.products-list__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 3px; }
+
+.products-list__additional {
+  font-size: 14px;
+  line-height: 1.43; }
+
+.product-selection {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 2px 14px 0 rgba(47, 51, 77, 0.25);
+     -moz-box-shadow: 0 2px 14px 0 rgba(47, 51, 77, 0.25);
+          box-shadow: 0 2px 14px 0 rgba(47, 51, 77, 0.25);
+  background-color: #fff;
+  padding: 46px 159px 46px 40px; }
+
+.product-selection__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.28;
+  margin-bottom: 21px; }
+
+.product-selection__text {
+  font-size: 18px;
+  line-height: 1.56;
+  margin-bottom: 23px; }
+
+.product-selection__advantages {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 26px; }
+
+.product-selection__advantages-text {
+  font-size: 16px;
+  line-height: 1.5; }
+
+.product-selection__advantages-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 24px; }
+
+.product-selection__advantages-icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 16px; }
+
+.form-item {
+  width: 296px;
+  height: 48px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  border: solid 1px #cdcdd2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  -moz-transition: .3s ease;
+  transition: .3s ease; }
+  .form-item.focus {
+    border-color: #ddb527;
+    outline: 6px solid #ffd94d; }
+
+.input-phone {
+  width: 197px;
+  height: 100%;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding: 10px 16px 14px; }
+
+.input-phone:focus {
+  outline: none; }
+
+.form-submit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+  height: -webkit-calc(100% + 1px);
+  height: -moz-calc(100% + 1px);
+  height: calc(100% + 1px);
+  margin-top: -1px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
 
 /*# sourceMappingURL=main.css.map */

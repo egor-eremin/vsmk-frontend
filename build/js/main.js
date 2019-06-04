@@ -166,6 +166,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 
 
+(function addsFocus() {
+  var elementParent = $('.input-phone').parent('.form-item');
+  $('.input-phone').focus(function () {
+    elementParent.addClass('focus');
+  });
+  $('.input-phone').blur(function () {
+    elementParent.removeClass('focus');
+  });
+})();
+
+function media(mediaQueryString, action) {
+  'use strict';
+
+  var handleMatchMedia = function handleMatchMedia(mediaQuery) {
+    if (mediaQuery.matches) {
+      //Попадает в запроc
+      if (action && typeof action === 'function') {
+        action();
+      }
+    }
+  };
+
+  var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
+
+  handleMatchMedia(mql);
+  mql.addListener(handleMatchMedia);
+}
+
 /***/ }),
 
 /***/ "./src/js/vendor.js":
@@ -183,9 +211,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svg4everybody__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(svg4everybody__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
+
+object_fit_images__WEBPACK_IMPORTED_MODULE_3___default()();
 svg4everybody__WEBPACK_IMPORTED_MODULE_1___default()();
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;
