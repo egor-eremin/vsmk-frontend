@@ -183,7 +183,16 @@ $(document).ready(function () {
   })();
 
   (function validationInputForm() {
-    validationForm('.product-selection', '.form-item-wrapper', '.good-text');
+    validationForm('.product-selection', '.form-item-wrapper', '.good-text-wrapper');
+  })();
+
+  (function goPrev() {
+    $('.prev').on('click', function () {
+      var currentPhone = $(this).parent('.attention-block__text-wrapper').find('.current-phone');
+      $('.input-phone').val('');
+      $('.good-text-wrapper').removeClass('show-information');
+      $('.form-item-wrapper').removeClass('hide-information');
+    });
   })();
 });
 
@@ -193,6 +202,9 @@ function validationForm(formInit, formWrapper, textGood, textBad) {
       v.errorContext.addClass('animate');
     },
     submitHandler: function submitHandler(form) {
+      var inputPhone = $(form).find('.user-phone');
+      var inputValue = inputPhone.val();
+      $(textGood).find('.current-phone').text(inputValue);
       $(form).removeClass('animate');
       $.ajax({
         type: $(form).attr('method'),

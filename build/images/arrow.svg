@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="11px" height="8px" viewBox="0 0 11 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>left-arrow (1)</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ВСМК-UI" transform="translate(-96.000000, -775.000000)" fill="#555553" fill-rule="nonzero">
-            <g id="Group-20" transform="translate(56.000000, 456.000000)">
-                <g id="Group-3" transform="translate(40.000000, 313.000000)">
-                    <g id="left-arrow-(1)" transform="translate(0.000000, 7.000000)">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-96.000000, -775.000000)" fill="#555553" fill-rule="nonzero">
+            <g transform="translate(56.000000, 456.000000)">
+                <g transform="translate(40.000000, 313.000000)">
+                    <g transform="translate(0.000000, 7.000000)">
                         <path d="M3.58825677,-0.879680231 C3.74333024,-1.04010659 3.98746616,-1.04010659 4.14253963,-0.879680231 C4.29237413,-0.724673682 4.29237413,-0.466690755 4.14253963,-0.312045526 L1.33200772,2.59550156 L10.6063788,2.59550156 C10.8225736,2.59550156 11,2.77327131 11,2.99692877 C11,3.22058624 10.8225736,3.40413712 10.6063788,3.40413712 L1.33200772,3.40413712 L4.14253963,6.3062644 C4.29237413,6.46669075 4.29237413,6.725035 4.14253963,6.87968023 C3.98746616,7.04010659 3.74333024,7.04010659 3.58825677,6.87968023 L0.112375872,3.28381735 C-0.0374586241,3.1288108 -0.0374586241,2.87082788 0.112375872,2.71618265 L3.58825677,-0.879680231 Z" id="Path"></path>
                     </g>
                 </g>
