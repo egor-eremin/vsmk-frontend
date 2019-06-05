@@ -300,7 +300,7 @@ body {
 .product-selection__advantages {
   display: flex;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 }
 .product-selection__advantages-text {
   font-size: 16px;
@@ -323,11 +323,13 @@ body {
   border-radius: 4px;
   border: solid 1px #cdcdd2;
   display: flex;
+  //align-items: center;
   align-items: flex-start;
   transition: .3s ease;
+  margin-bottom: 9px;
   &.focus {
     border-color: $color-yellow-border-input-focus;
-    outline: 6px solid $color-yellow-outline-focus;
+    box-shadow: 0px 0px 0px 3px $color-yellow-box-shadow-focus;
   }
 }
 .input-phone {
@@ -344,9 +346,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 95px;
   border-radius: 0 4px 4px 0;
-  height: calc(100% + 1px);
-  margin-top: -1px;
+  height: calc(100% - 4px);
+  //margin-top: -1px;
+  margin-top: 2px;
   flex-shrink: 0;
+  transition: .3s ease;
+  box-shadow: 0 1px 0 0 rgba(221,181,39,0);
+  &:active {
+    width: 98px;
+    margin-top: -1px;
+    height: calc(100% + 1px);
+    box-shadow: 0 1px 0 0 rgba(221,181,39,1);
+  }
+}
+.form-item-text {
+  opacity: .8;
+  font-size: 14px;
+  line-height: 1.43;
+}
+.form-item-wrapper.hide-information {
+  display: none;
+}
+.good-text {
+  display: none;
+  &.show-information {
+    display: block;
+  }
 }

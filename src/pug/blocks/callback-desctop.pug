@@ -1,6 +1,6 @@
 mixin callback-content-desctop
     .product-selection__title Поможем с выбором стройматериалов
-    .product-selection__text Оставьте номер телефона, позвоним в течение 10 минут и поможем подобрать кровельные и фасадные материалы
+    .product-selection__text Оставьте номер телефона, позвоним в течение 10 минут<br> и поможем подобрать кровельные и фасадные материалы
     .product-selection__advantages
         .product-selection__advantages-item
             .product-selection__advantages-icon
@@ -35,13 +35,17 @@ mixin callback-content-desctop
                 |
             .product-selection__advantages-text
                 | Изготовим за 1 день
-    .form-item
-        input.input-phone(type="tel" name="phone")
-        button.btn.form-submit(type="submit") Ok
+    .form-item-wrapper
+        .form-item
+            input.input-phone(type="tel" maxlength="18" minlength="18" required name="phone")
+            button.btn.form-submit Ok
+        .form-item-text Нужен только для звонка. Без спама.
+    .good-text
+        | ЗБС!
 mixin callback-desctop(class_modification)
     if class_modification === undefined
-        form(class='product-selection' action="#" method="post")
+        form(class='product-selection')
             +callback-content-desctop
     else
-        form(class='product-selection' action="#" method="post" + class_modification)
+        form(class='product-selection' + class_modification)
             +callback-content-desctop

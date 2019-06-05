@@ -165,16 +165,57 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 
+$(document).ready(function () {
+  (function addsFocus() {
+    var elementParent = $('.input-phone').parent('.form-item');
+    $('.input-phone').focus(function () {
+      elementParent.addClass('focus');
+    });
+    $('.input-phone').blur(function () {
+      elementParent.removeClass('focus');
+    });
+  })();
 
-(function addsFocus() {
-  var elementParent = $('.input-phone').parent('.form-item');
-  $('.input-phone').focus(function () {
-    elementParent.addClass('focus');
+  (function addPhoneMask() {
+    $('.input-phone').mask('+7 (000) 000-00-00', {
+      placeholder: "+7 (___) ___-__-__"
+    });
+  })();
+
+  (function validationInputForm() {
+    validationForm('.product-selection', '.form-item-wrapper', '.good-text');
+  })();
+});
+
+function validationForm(formInit, formWrapper, textGood, textBad) {
+  $(formInit).validate({
+    invalidHandler: function invalidHandler(e, v) {
+      v.errorContext.addClass('animate');
+    },
+    submitHandler: function submitHandler(form) {
+      $(form).removeClass('animate');
+      $.ajax({
+        type: $(form).attr('method'),
+        url: $(form).attr('action'),
+        data: new FormData(form),
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: 'text',
+        success: function success() {
+          $(formWrapper).addClass('hide-information');
+          $(textGood).addClass('show-information');
+        },
+        error: function error() {
+          console.log('Упс... Что-то пошло по пизде!');
+        }
+      });
+      return false;
+    }
   });
-  $('.input-phone').blur(function () {
-    elementParent.removeClass('focus');
-  });
-})();
+}
+
+;
 
 function media(mediaQueryString, action) {
   'use strict';
@@ -211,13 +252,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svg4everybody__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(svg4everybody__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-mask-plugin */ "./node_modules/jquery-mask-plugin/dist/jquery.mask.js");
+/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-validation */ "./node_modules/jquery-validation/dist/jquery.validate.js");
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
-object_fit_images__WEBPACK_IMPORTED_MODULE_3___default()();
+
+
+object_fit_images__WEBPACK_IMPORTED_MODULE_5___default()();
 svg4everybody__WEBPACK_IMPORTED_MODULE_1___default()();
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;

@@ -868,7 +868,7 @@ body {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 26px; }
+  margin-bottom: 25px; }
 
 .product-selection__advantages-text {
   font-size: 16px;
@@ -925,10 +925,13 @@ body {
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;
   -moz-transition: .3s ease;
-  transition: .3s ease; }
+  transition: .3s ease;
+  margin-bottom: 9px; }
   .form-item.focus {
     border-color: #ddb527;
-    outline: 6px solid #ffd94d; }
+    -webkit-box-shadow: 0px 0px 0px 3px rgba(255, 216, 77, 0.6);
+       -moz-box-shadow: 0px 0px 0px 3px rgba(255, 216, 77, 0.6);
+            box-shadow: 0px 0px 0px 3px rgba(255, 216, 77, 0.6); }
 
 .input-phone {
   width: 197px;
@@ -960,16 +963,45 @@ body {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  width: 95px;
   -webkit-border-radius: 0 4px 4px 0;
      -moz-border-radius: 0 4px 4px 0;
           border-radius: 0 4px 4px 0;
-  height: -webkit-calc(100% + 1px);
-  height: -moz-calc(100% + 1px);
-  height: calc(100% + 1px);
-  margin-top: -1px;
+  height: -webkit-calc(100% - 4px);
+  height: -moz-calc(100% - 4px);
+  height: calc(100% - 4px);
+  margin-top: 2px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
-          flex-shrink: 0; }
+          flex-shrink: 0;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  -moz-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-box-shadow: 0 1px 0 0 rgba(221, 181, 39, 0);
+     -moz-box-shadow: 0 1px 0 0 rgba(221, 181, 39, 0);
+          box-shadow: 0 1px 0 0 rgba(221, 181, 39, 0); }
+  .form-submit:active {
+    width: 98px;
+    margin-top: -1px;
+    height: -webkit-calc(100% + 1px);
+    height: -moz-calc(100% + 1px);
+    height: calc(100% + 1px);
+    -webkit-box-shadow: 0 1px 0 0 #ddb527;
+       -moz-box-shadow: 0 1px 0 0 #ddb527;
+            box-shadow: 0 1px 0 0 #ddb527; }
+
+.form-item-text {
+  opacity: .8;
+  font-size: 14px;
+  line-height: 1.43; }
+
+.form-item-wrapper.hide-information {
+  display: none; }
+
+.good-text {
+  display: none; }
+  .good-text.show-information {
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */
