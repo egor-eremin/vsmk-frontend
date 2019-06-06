@@ -1,0 +1,36 @@
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  16.6%,
+  49.8%,
+  83% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  33.2%,
+  66.4% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  16.6%,
+  49.8%,
+  83% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  33.2%,
+  66.4% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}

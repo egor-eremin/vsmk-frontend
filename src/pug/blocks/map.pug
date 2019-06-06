@@ -1,0 +1,9 @@
+mixin map-content-desctop
+    #map-init.map-block
+mixin map(class_modification)
+    if class_modification === undefined
+        div(class='map-wrapper')
+            +map-content-desctop
+    else
+        div(class='map-wrapper' + class_modification)
+            +map-content-desctop
