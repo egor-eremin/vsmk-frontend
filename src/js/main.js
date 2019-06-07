@@ -80,7 +80,12 @@ $(document).ready(function () {
             }
         }
     })();
-
+    (function activateViewportChecker() {
+        $('.viewport-checker-block').viewportChecker({
+            classToAdd: 'animation',
+            // classToRemove: 'hide-information',
+        });
+    })();
 });
 
 function validationForm(formInit, formWrapper, textGood, animation) {

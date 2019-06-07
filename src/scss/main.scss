@@ -8,6 +8,7 @@
 @import "vendor";
 @import "base";
 @import "animation";
+@import "animate";
 
 body {
   font-family: $fonts-open-sans;
@@ -572,4 +573,10 @@ body {
 }
 .mmit-svg {
   margin-bottom: 4px;
+}
+.viewport-checker-block.hide-information {
+  display: none;
+}
+.viewport-checker-block.animation {
+  animation: fadeInUp .6s ease;
 }

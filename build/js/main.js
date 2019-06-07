@@ -238,6 +238,13 @@ $(document).ready(function () {
       ymaps.ready(init);
     }
   })();
+
+  (function activateViewportChecker() {
+    $('.viewport-checker-block').viewportChecker({
+      classToAdd: 'animation' // classToRemove: 'hide-information',
+
+    });
+  })();
 });
 
 function validationForm(formInit, formWrapper, textGood, animation) {

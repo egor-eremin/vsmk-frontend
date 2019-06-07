@@ -78,7 +78,7 @@ mixin callback-content-desctop
             | <span>Назад</span>
 mixin callback-desctop(class_modification)
     if class_modification === undefined
-        form(class='product-selection')
+        form(class='product-selection viewport-checker-block hide-information')
             +callback-content-desctop
     else
         form(class='product-selection' + class_modification)
