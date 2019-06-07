@@ -82,8 +82,11 @@ $(document).ready(function () {
     })();
     (function activateViewportChecker() {
         $('.viewport-checker-block').viewportChecker({
+            classToRemove: 'hide-block',
             classToAdd: 'animation',
-            // classToRemove: 'hide-information',
+            // callbackFunction: function (elem, action) {
+            //     $('.input-phone').focus();
+            // },
         });
     })();
 });

@@ -78,6 +78,9 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/*a:focus {*/
+/*    outline: thin dotted;*/
+/*}*/
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -7040,13 +7043,26 @@ body {
 .mmit-svg {
   margin-bottom: 4px; }
 
-.viewport-checker-block.hide-information {
-  display: none; }
+.viewport-checker-block.hide-block {
+  opacity: 0; }
 
 .viewport-checker-block.animation {
-  -webkit-animation: fadeInUp .6s ease;
-     -moz-animation: fadeInUp .6s ease;
-       -o-animation: fadeInUp .6s ease;
-          animation: fadeInUp .6s ease; }
+  -webkit-animation: fadeInUp 1s ease;
+     -moz-animation: fadeInUp 1s ease;
+       -o-animation: fadeInUp 1s ease;
+          animation: fadeInUp 1s ease; }
+
+.products-roofing,
+.products-screw-piles {
+  -webkit-animation-delay: .3s;
+     -moz-animation-delay: .3s;
+       -o-animation-delay: .3s;
+          animation-delay: .3s; }
+
+.products-drainage-systems {
+  -webkit-animation-delay: .6s;
+     -moz-animation-delay: .6s;
+       -o-animation-delay: .6s;
+          animation-delay: .6s; }
 
 /*# sourceMappingURL=main.css.map */

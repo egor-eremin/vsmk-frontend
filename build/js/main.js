@@ -241,7 +241,10 @@ $(document).ready(function () {
 
   (function activateViewportChecker() {
     $('.viewport-checker-block').viewportChecker({
-      classToAdd: 'animation' // classToRemove: 'hide-information',
+      classToRemove: 'hide-block',
+      classToAdd: 'animation' // callbackFunction: function (elem, action) {
+      //     $('.input-phone').focus();
+      // },
 
     });
   })();
