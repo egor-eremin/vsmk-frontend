@@ -1,0 +1,12 @@
+extends pug/base
+
+append vars
+	- title = "vsmk"
+	- meta.viewport = "width=device-width, initial-scale=1"
+
+block content
+	+header
+	main.main-content
+		.template-wrapper
+	+footer
+	+callback-block

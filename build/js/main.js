@@ -177,12 +177,12 @@ $(document).ready(function () {
   })();
 
   (function addNumberAfterFocus() {
-    $('.input-phone').on('focus', function () {
+    $('.user-phone').on('focus', function () {
       if (!$(this).val()) {
         $(this).val('+7 (');
       }
     });
-    $('.input-phone').on('blur', function () {
+    $('.user-phone').on('blur', function () {
       if ($(this).val().length <= 4) {
         $(this).val('');
       }
@@ -190,7 +190,7 @@ $(document).ready(function () {
   })();
 
   (function addPhoneMask() {
-    $('.input-phone').mask('+7 (000) 000-00-00', {
+    $('.user-phone').mask('+7 (000) 000-00-00', {
       placeholder: "+7 (___) ___-__-__"
     });
   })();
@@ -242,10 +242,45 @@ $(document).ready(function () {
   (function activateViewportChecker() {
     $('.viewport-checker-block').viewportChecker({
       classToRemove: 'hide-block',
-      classToAdd: 'animation' // callbackFunction: function (elem, action) {
-      //     $('.input-phone').focus();
-      // },
+      classToAdd: 'animation'
+    });
+    $('.product-selection').viewportChecker({
+      classToAdd: 'animateShake',
+      // repeat: true,
+      offset: '40%'
+    });
+  })();
 
+  (function initCallbackForm() {
+    $('.callback-link').magnificPopup({
+      type: 'inline',
+      focus: '.callback__phone-input',
+      mainClass: 'callback-form-wrapper',
+      callbacks: {
+        close: function close() {
+          if ($('.form-answer').hasClass('show-information')) {
+            $('.form-input').val('');
+            $('.callback-form__wrapper').removeClass('hide-information');
+            $('.form-answer').removeClass('show-information');
+          }
+        }
+      }
+    });
+  })();
+
+  (function validateCallbackForm() {
+    validationForm('.callback', '.callback-form__wrapper', '.form-answer', true);
+  })();
+
+  (function fixedMenu() {
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 105) {
+        $('.header-wrapper').addClass('fixed');
+        $('.fake-menu').addClass('show');
+      } else {
+        $('.header-wrapper').removeClass('fixed');
+        $('.fake-menu').removeClass('fake-menu');
+      }
     });
   })();
 });
@@ -325,17 +360,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-mask-plugin */ "./node_modules/jquery-mask-plugin/dist/jquery.mask.js");
 /* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-validation */ "./node_modules/jquery-validation/dist/jquery.validate.js");
-/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! magnific-popup */ "./node_modules/magnific-popup/dist/jquery.magnific-popup.js");
+/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery-validation */ "./node_modules/jquery-validation/dist/jquery.validate.js");
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
 
-object_fit_images__WEBPACK_IMPORTED_MODULE_5___default()();
+
+object_fit_images__WEBPACK_IMPORTED_MODULE_6___default()();
 svg4everybody__WEBPACK_IMPORTED_MODULE_1___default()();
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;

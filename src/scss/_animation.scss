@@ -34,3 +34,11 @@
     transform: translateX(10px);
   }
 }
+@keyframes showFixedMenu {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}

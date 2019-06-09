@@ -4,8 +4,8 @@ mixin header-content
             a(href="tel:83952404061").phone-link 8 (3952) 40-40-61
             .operation-mode
                 | В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30
-            a(href="#").callback-link Заказать обратный звонок
-    .template-wrapper
+            a(href="#callback-form").callback-link Заказать обратный звонок
+    .template-wrapper.header-wrapper
         .header-menu
             .header-menu-background
             .header-menu__wrapper
@@ -38,7 +38,7 @@ mixin header-content
                         li.main-nav__li
                             a(href="#")
                                 span.main-nav-wrapper КОНТАКТЫ
-
+        .fake-menu
 mixin header(class_modification)
     if class_modification === undefined
         header(class= 'main-header')

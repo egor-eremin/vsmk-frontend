@@ -13,19 +13,19 @@ $(document).ready(function () {
         });
     })();
     (function addNumberAfterFocus() {
-        $('.input-phone').on('focus', function () {
+        $('.user-phone').on('focus', function () {
             if (!$(this).val()) {
                 $(this).val('+7 (');
             }
         });
-        $('.input-phone').on('blur', function () {
+        $('.user-phone').on('blur', function () {
             if ($(this).val().length <= 4) {
                 $(this).val('');
             }
         });
     })();
     (function addPhoneMask() {
-        $('.input-phone').mask('+7 (000) 000-00-00', {
+        $('.user-phone').mask('+7 (000) 000-00-00', {
             placeholder: "+7 (___) ___-__-__",
             });
     })();
@@ -84,9 +84,41 @@ $(document).ready(function () {
         $('.viewport-checker-block').viewportChecker({
             classToRemove: 'hide-block',
             classToAdd: 'animation',
-            // callbackFunction: function (elem, action) {
-            //     $('.input-phone').focus();
-            // },
+        });
+        $('.product-selection').viewportChecker({
+            classToAdd: 'animateShake',
+            // repeat: true,
+            offset: '40%',
+        });
+    })();
+    (function initCallbackForm() {
+        $('.callback-link').magnificPopup({
+            type: 'inline',
+            focus: '.callback__phone-input',
+            mainClass: 'callback-form-wrapper',
+            callbacks: {
+              close: function () {
+                  if ($('.form-answer').hasClass('show-information')) {
+                      $('.form-input').val('');
+                      $('.callback-form__wrapper').removeClass('hide-information');
+                      $('.form-answer').removeClass('show-information');
+                  }
+              }
+            },
+        });
+    })();
+    (function validateCallbackForm() {
+        validationForm('.callback','.callback-form__wrapper','.form-answer', true);
+    })();
+    (function fixedMenu() {
+        $(window).on('scroll', function () {
+            if($(this).scrollTop() > 105) {
+                $('.header-wrapper').addClass('fixed');
+                $('.fake-menu').addClass('show');
+            } else {
+                $('.header-wrapper').removeClass('fixed');
+                $('.fake-menu').removeClass('fake-menu');
+            }
         });
     })();
 });
