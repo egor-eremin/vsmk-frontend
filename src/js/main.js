@@ -117,7 +117,7 @@ $(document).ready(function () {
                 $('.fake-menu').addClass('show');
             } else {
                 $('.header-wrapper').removeClass('fixed');
-                $('.fake-menu').removeClass('fake-menu');
+                $('.fake-menu').removeClass('show');
             }
         });
     })();
