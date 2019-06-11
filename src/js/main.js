@@ -60,7 +60,7 @@ $(document).ready(function () {
                     }, {
                         balloonShadow: false,
                         iconLayout: 'default#image',
-                        iconImageHref: '../images/point.svg',
+                        iconImageHref: './images/point.svg',
                         iconImageSize: [29, 48],
                         iconImageOffset: [-14, -48]
                     });

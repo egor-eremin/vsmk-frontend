@@ -222,7 +222,7 @@ $(document).ready(function () {
             myPlacemark = window.myPlacemark = new ymaps.Placemark([52.278407791991356, 104.21523449667427], {}, {
           balloonShadow: false,
           iconLayout: 'default#image',
-          iconImageHref: '../images/point.svg',
+          iconImageHref: './images/point.svg',
           iconImageSize: [29, 48],
           iconImageOffset: [-14, -48]
         });
