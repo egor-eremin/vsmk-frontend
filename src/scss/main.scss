@@ -735,9 +735,11 @@ body {
 .section-page {
   margin-top: 75px;
 }
-.content-text {
+.about__text {
   max-width: 656px;
   width: 100%;
+}
+.content-text {
   h1 {
     font-size: 28px;
     font-weight: 800;
@@ -765,10 +767,77 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
-.about-callback {
+.about-callback, .contact-callback {
   background: transparent;
   box-shadow: none;
   padding: 0;
   margin-top: 30px;
   margin-bottom: 144px;
+}
+.contact-title {
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.address {
+  line-height: 1.5;
+}
+.contact-information__item {
+  display: flex;
+  align-items: center;
+}
+.contact-information__text {
+  font-size: 16px;
+  color: $color-ocean-blue;
+  transition: .3s ease;
+}
+.contact-information__text:hover {
+  color: $color-tomato;
+}
+.contact-information__icon {
+  margin-right: 16px;
+}
+.contact-information {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.contact-information__item + .contact-information__item {
+  margin-top: 8px;
+}
+.phone-icon {
+  margin-top: 5px;
+}
+.mail-icon {
+  margin-top: 7px;
+}
+.contact-title_requisites {
+  margin-top: 48px;
+  margin-bottom: 13px;
+}
+.requisites {
+  font-size: 14px;
+  line-height: 1.14;
+}
+.requisites__item + .requisites__item {
+  margin-top: 9px;
+}
+.contact-callback {
+  margin-top: 49px;
+}
+.contact {
+  display: flex;
+  align-items: flex-start;
+}
+.contact__text {
+  max-width: 386px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 152px;
+}
+.contact__map {
+  width: calc(100% - 538px);
+  padding-top: 11px;
+  & .map-block {
+    height: 520px;
+  }
 }
