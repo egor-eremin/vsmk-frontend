@@ -78,6 +78,9 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/*a:focus {*/
+/*    outline: thin dotted;*/
+/*}*/
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -6814,6 +6817,9 @@ body {
 .main-nav__li {
   padding: 0 20px; }
 
+.main-nav__li.active .main-nav-wrapper {
+  color: rgba(255, 255, 255, 0.6); }
+
 .main-nav-wrapper {
   position: relative;
   z-index: 2;
@@ -7664,7 +7670,7 @@ body {
   height: 56px;
   width: 100%;
   display: none; }
-  .fake-menu .show {
+  .fake-menu.show {
     display: block; }
 
 .header-wrapper.fixed {
@@ -7685,5 +7691,58 @@ body {
     -webkit-border-radius: 0 0 4px 4px;
        -moz-border-radius: 0 0 4px 4px;
             border-radius: 0 0 4px 4px; }
+
+.about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.section-page {
+  margin-top: 75px; }
+
+.content-text {
+  max-width: 656px;
+  width: 100%; }
+  .content-text h1 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.29;
+    margin-bottom: 37px; }
+  .content-text p {
+    line-height: 1.75;
+    margin-bottom: 16px; }
+  .content-text h3 {
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 30px;
+    font-size: 16px;
+    margin-bottom: 14px; }
+
+.about-picture {
+  position: relative;
+  top: 13px;
+  left: 55px;
+  width: 384px;
+  height: 384px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden; }
+
+.about-callback {
+  background: transparent;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 144px; }
 
 /*# sourceMappingURL=main.css.map */

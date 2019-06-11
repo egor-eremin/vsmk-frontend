@@ -38,11 +38,12 @@ mixin header-content
                         li.main-nav__li
                             a(href="#")
                                 span.main-nav-wrapper КОНТАКТЫ
-        .fake-menu
 mixin header(class_modification)
     if class_modification === undefined
         header(class= 'main-header')
             +header-content
+            .fake-menu
     else
         header(class= 'main-header ' + class_modification)
             +header-content
+            .fake-menu

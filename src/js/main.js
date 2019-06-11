@@ -85,7 +85,7 @@ $(document).ready(function () {
             classToRemove: 'hide-block',
             classToAdd: 'animation',
         });
-        $('.product-selection').viewportChecker({
+        $('.product-selection:not(.about-callback)').viewportChecker({
             classToAdd: 'animateShake',
             // repeat: true,
             offset: '40%',
