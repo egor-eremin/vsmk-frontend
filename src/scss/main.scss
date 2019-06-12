@@ -9,6 +9,7 @@
 @import "base";
 @import "animation";
 @import "animate";
+@import "retina";
 
 body {
   font-family: $fonts-open-sans;
@@ -110,13 +111,14 @@ body {
   position: absolute;
   content: '';
   transition: .3s ease;
-  filter: blur(15px);
-  background-color: #ffd84d;
-  width: 73px;
+  width: 141px;
   height: 56px;
+  background-image: url("../images/hover_1x.png");
+  background-repeat: no-repeat;
+  background-size: 141px 56px;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 34px);
+  transform: translate(-50%, 0);
   z-index: 1;
   opacity: 0;
 }

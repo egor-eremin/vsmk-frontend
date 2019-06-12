@@ -1,0 +1,1 @@
+{"version":3,"sources":["retina.scss"],"names":[],"mappings":"AAAA;EACE,+CAA+C,EAAA","file":"retina.css","sourcesContent":["@media (min-resolution: 1dppx) {\r\n  background-image: url(\"../images/hover_2x.png\");\r\n}"]}
