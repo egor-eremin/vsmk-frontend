@@ -1,4 +1,6 @@
 import './vendor';
+require ('./vendor/jquery.inputmask.min');
+require ('./vendor/jquery.viewportchecker.min');
 
 $(document).ready(function () {
     (function addsFocus() {
@@ -29,7 +31,7 @@ $(document).ready(function () {
         //     placeholder: "+7 (___) ___-__-__",
         //     });
 		$('.user-phone').inputmask("+7 (999) 999-99-99", {
-			placeholder: "_";
+			placeholder: "_",
 		})
     })();
     (function validationInputForm() {
@@ -115,20 +117,32 @@ $(document).ready(function () {
         validationForm('.callback','.callback-form__wrapper','.form-answer', true);
     })();
     (function fixedMenu() {
+        var coordinateMenu = $('.header-wrapper').offset().top;
+        // console.log(coordinateMenu);
         $(window).on('scroll', function () {
-            if($(this).scrollTop() > 105) {
+            if($(this).scrollTop() > coordinateMenu) {
                 $('.header-wrapper').addClass('fixed');
                 $('.fake-menu').addClass('show');
             } else {
                 $('.header-wrapper').removeClass('fixed');
                 $('.fake-menu').removeClass('show');
-            }
-        });
+        }
+    });
     })();
 });
 
 function validationForm(formInit, formWrapper, textGood, animation) {
+    $.validator.addMethod("minlenghtphone", function (value, element) {
+
+            return value.replace(/\D+/g, '').length > 10;
+        },
+        "");
     $(formInit).validate({
+        rules: {
+            phone:  {
+                minlenghtphone: true,
+            },
+        },
         invalidHandler: function (e, v) {
             if (animation) {
                 var animationForm = v.errorContext;

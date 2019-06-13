@@ -258,12 +258,11 @@ body {
 .btn:hover,
 .btn:focus {
 	background-color: $color-yellow-btn-hover;
-}
-
-.btn:focus {
 	outline: none;
 }
-
+.btn:active {
+	box-shadow: 0 1px 0 0 rgba(221,181,39, 0);
+}
 .btn-start-constructor {
 	padding: 10px 78px 14px;
 	position: absolute;
@@ -309,6 +308,8 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	z-index: 10;
 }
 
 .main-h2_small {
@@ -333,6 +334,7 @@ body {
 	box-shadow: 0 2px 14px 0 rgba(47, 51, 77, 0.25);
 	background-color: $color-white;
 	padding: 46px 159px 46px 40px;
+	height: 100%;
 	&.animateShake {
 		animation: shake-horizontal .8s ease;
 	}
@@ -420,7 +422,7 @@ body {
 	&:active {
 		margin-top: 2px;
 		height: calc(100% - 4px);
-		width: 95px;
+		width: 94px;
 		box-shadow: 0 1px 0 0 rgba(221, 181, 39, 0);
 	}
 }
@@ -441,6 +443,9 @@ body {
 	&.show-information {
 		display: block;
 	}
+}
+.good-text-wrapper.show-information .information-icon {
+	animation: animationSuccess .3s ease-in-out forwards;
 }
 
 .attention-block {
@@ -465,6 +470,8 @@ body {
 	margin-right: 16px;
 	margin-top: 6px;
 	flex-shrink: 0;
+	opacity: 0;
+	transform: translateY(-10px);
 	& svg {
 		margin-right: -3px;
 	}
@@ -713,10 +720,10 @@ body {
 	transform: translateY(-200px);
 }
 .callback-form-wrapper.mfp-ready .mfp-content {
-	animation: animationOpenCallbackForm .25s ease both;
+	animation: animationOpenCallbackForm .25s ease forwards;
 }
 .callback-form-wrapper.mfp-removing .mfp-content {
-	animation: animationCloseCallbackForm .25s ease both;
+	animation: animationCloseCallbackForm .25s ease forwards;
 }
 .callback-form__wrapper {
 	display: flex;
@@ -810,7 +817,9 @@ body {
 		display: flex;
 	}
 }
-
+.form-answer.show-information .information-icon {
+	animation: animationSuccess .3s ease-in-out forwards;
+}
 .answer-title {
 	font-size: 20px;
 	font-weight: 700;
@@ -845,7 +854,7 @@ body {
 	left: 50%;
 	top: 0;
 	transform: translate(-50%, 0);
-	animation: showFixedMenu .3s ease forwards;
+	//animation: showFixedMenu .3s ease forwards;
 	& .header-menu {
 		border-radius: 0 0 4px 4px;
 	}
@@ -985,4 +994,11 @@ body {
 	& .map-block {
 		height: 520px;
 	}
+}
+.button-submit-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
 }
