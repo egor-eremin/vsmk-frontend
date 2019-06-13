@@ -78,6 +78,9 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/*a:focus {*/
+/*    outline: thin dotted;*/
+/*}*/
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -913,6 +916,94 @@ picture {
        -moz-transform: translate(-50%, 0);
          -o-transform: translate(-50%, 0);
             transform: translate(-50%, 0); } }
+
+@-webkit-keyframes animationOpenCallbackForm {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
+
+@-moz-keyframes animationOpenCallbackForm {
+  0% {
+    -moz-transform: translateY(-200px);
+         transform: translateY(-200px);
+    opacity: 0; }
+  100% {
+    -moz-transform: translateY(0);
+         transform: translateY(0);
+    opacity: 1; } }
+
+@-o-keyframes animationOpenCallbackForm {
+  0% {
+    -o-transform: translateY(-200px);
+       transform: translateY(-200px);
+    opacity: 0; }
+  100% {
+    -o-transform: translateY(0);
+       transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes animationOpenCallbackForm {
+  0% {
+    -webkit-transform: translateY(-200px);
+       -moz-transform: translateY(-200px);
+         -o-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes animationCloseCallbackForm {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0; } }
+
+@-moz-keyframes animationCloseCallbackForm {
+  0% {
+    -moz-transform: translateY(0);
+         transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -moz-transform: translateY(-200px);
+         transform: translateY(-200px);
+    opacity: 0; } }
+
+@-o-keyframes animationCloseCallbackForm {
+  0% {
+    -o-transform: translateY(0);
+       transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -o-transform: translateY(-200px);
+       transform: translateY(-200px);
+    opacity: 0; } }
+
+@keyframes animationCloseCallbackForm {
+  0% {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-200px);
+       -moz-transform: translateY(-200px);
+         -o-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0; } }
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -7521,6 +7612,26 @@ body {
        -moz-animation: shake-horizontal .4s ease;
          -o-animation: shake-horizontal .4s ease;
             animation: shake-horizontal .4s ease; }
+
+.mfp-content {
+  opacity: 0;
+  -webkit-transform: translateY(-200px);
+     -moz-transform: translateY(-200px);
+      -ms-transform: translateY(-200px);
+       -o-transform: translateY(-200px);
+          transform: translateY(-200px); }
+
+.callback-form-wrapper.mfp-ready .mfp-content {
+  -webkit-animation: animationOpenCallbackForm .25s ease both;
+     -moz-animation: animationOpenCallbackForm .25s ease both;
+       -o-animation: animationOpenCallbackForm .25s ease both;
+          animation: animationOpenCallbackForm .25s ease both; }
+
+.callback-form-wrapper.mfp-removing .mfp-content {
+  -webkit-animation: animationCloseCallbackForm .25s ease both;
+     -moz-animation: animationCloseCallbackForm .25s ease both;
+       -o-animation: animationCloseCallbackForm .25s ease both;
+          animation: animationCloseCallbackForm .25s ease both; }
 
 .callback-form__wrapper {
   display: -webkit-box;

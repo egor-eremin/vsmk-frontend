@@ -42,3 +42,23 @@
     transform: translate(-50%, 0);
   }
 }
+@keyframes animationOpenCallbackForm {
+	0% {
+		transform: translateY(-200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes animationCloseCallbackForm {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-200px);
+		opacity: 0;
+	}
+}

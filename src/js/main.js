@@ -25,9 +25,12 @@ $(document).ready(function () {
         });
     })();
     (function addPhoneMask() {
-        $('.user-phone').mask('+7 (000) 000-00-00', {
-            placeholder: "+7 (___) ___-__-__",
-            });
+        // $('.user-phone').mask('+7 (000) 000-00-00', {
+        //     placeholder: "+7 (___) ___-__-__",
+        //     });
+		$('.user-phone').inputmask("+7 (999) 999-99-99", {
+			placeholder: "_";
+		})
     })();
     (function validationInputForm() {
         validationForm('.product-selection', '.form-item-wrapper', '.good-text-wrapper', true);
@@ -96,6 +99,7 @@ $(document).ready(function () {
             type: 'inline',
             focus: '.callback__phone-input',
             mainClass: 'callback-form-wrapper',
+			removalDelay: 250,
             callbacks: {
               close: function () {
                   if ($('.form-answer').hasClass('show-information')) {
