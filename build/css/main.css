@@ -78,9 +78,6 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/*a:focus {*/
-/*    outline: thin dotted;*/
-/*}*/
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -7088,6 +7085,12 @@ body {
   grid-row-gap: 32px;
   margin-top: 4px; }
 
+.products-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'object-fit: cover;'; }
+
 .products-roofing {
   grid-area: 1 / 2 / 2 / 4; }
 
@@ -7468,13 +7471,6 @@ body {
 .products {
   margin-bottom: 103px; }
 
-.about-section__text {
-  max-width: 504px;
-  width: 100%;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0; }
-
 .about-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7490,11 +7486,11 @@ body {
 
 .map-block {
   height: 288px;
-  width: 100%;
   overflow: hidden;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
-          border-radius: 4px; }
+          border-radius: 4px;
+  width: 558px; }
 
 .about-section__map {
   -webkit-box-flex: 1;
@@ -8057,5 +8053,13 @@ body {
      -moz-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+
+@media (max-width: 1156px) {
+  .products-drainage-systems {
+    grid-area: 2 / 3 / 3 / 3; }
+  .products-form {
+    grid-area: 3 / 1 / 4 / 4; }
+  .products-img {
+    height: 240px; } }
 
 /*# sourceMappingURL=main.css.map */
