@@ -36,10 +36,11 @@ mixin callback-content-desctop
             .product-selection__advantages-text
                 | Изготовим за 1 день
     .form-item-wrapper
-        .form-item
-            input.input-phone.user-phone(type="tel" maxlength="18" minlength="18" required placeholder="+7 (___) ___-__-__" name="phone")
-            .button-submit-wrapper
-                button.btn.form-submit Ок
+        .form-item__wrapper-viewportchecker
+            .form-item
+                input.input-phone.user-phone(type="tel" maxlength="18" minlength="18" required placeholder="+7 (___) ___-__-__" name="phone")
+                .button-submit-wrapper
+                    button.btn.form-submit Ок
         .form-item-text Нужен только для звонка. Без спама.
     .good-text-wrapper
         .attention-block

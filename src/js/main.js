@@ -129,6 +129,17 @@ $(document).ready(function () {
         }
     });
     })();
+    (function burgerMobileInit() {
+        $('.burger-mobile').on('click', function () {
+           if (!$(this).hasClass('active')) {
+               $(this).addClass('active');
+               $('.main-header').addClass('open-mobile-menu');
+           } else {
+               $(this).removeClass('active');
+               $('.main-header').removeClass('open-mobile-menu');
+           }
+        });
+    })();
 });
 
 function validationForm(formInit, formWrapper, textGood, animation) {
@@ -191,4 +202,4 @@ function media(mediaQueryString, action){
     var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
     handleMatchMedia(mql);
     mql.addListener(handleMatchMedia);
-}
+};

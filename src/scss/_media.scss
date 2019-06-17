@@ -10,6 +10,72 @@
   }
 }
 
-@media (max-width: 780px)  {
-  
+@media (max-width: 780px) {
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .products-list__item {
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  .about-section {
+    display: none;
+  }
+  .products-roofing {
+    order: 0;
+    width: 100%;
+  }
+  .products-front-panels {
+    order: 1;
+  }
+  .products-img img {
+    width: 100%;
+  }
+  .products-form {
+    order: 6;
+    width: 100%;
+  }
+  .products-fences, .products-drainage-systems {
+    margin-right: 15px;
+  }
+  .products-screw-piles, .products-front-panels {
+    margin-left: 15px;
+  }
+  .header-contacts__wrapper {
+    display: none;
+  }
+  .template-wrapper {
+    padding: 0 8px;
+  }
+  .header-wrapper {
+    padding: 0;
+  }
+  .header-menu,
+  .header-wrapper.fixed .header-menu {
+    border-radius: 0;
+  }
+  .main-nav {
+    display: none;
+  }
+  .logo-text {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  .main-logo {
+    margin-left: 8px;
+    margin-right: 12px;
+  }
+  .header-menu-background {
+    display: none;
+  }
+  .header-menu__wrapper {
+    width: 100%;
+  }
+  .burger-mobile {
+    display: block;
+  }
+  .logo-text {
+    margin-right: 0;
+  }
 }

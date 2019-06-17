@@ -5,13 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>vsmk</title>
-		<link rel="stylesheet" href="css/main.css?v=1560683474335">
+		<link rel="stylesheet" href="css/main.css?v=1560764234333">
 	</head>
 	<body>
 		<div class="layout-template-wrapper">
 			<div class="layout-template-wrapper__inner">
 				<header class="main-header">
-					<div class="template-wrapper">
+					<div class="template-wrapper header-contacts__wrapper">
 						<div class="header-contacts"><a class="phone-link" href="tel:83952404061">8 (3952) 40-40-61</a>
 							<div class="operation-mode">В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30</div><a class="callback-link" href="#callback-form">Заказать обратный звонок</a>
 						</div>
@@ -41,12 +41,26 @@
 									</svg>
 								</div>
 								<div class="logo-text">Системы кровельных<br> и фасадных материалов</div>
+								<buttom class="burger-mobile"><span class="burger-mobile__item"></span><span class="burger-mobile__item"></span><span class="burger-mobile__item"></span></buttom>
 								<nav class="main-nav">
 									<ul class="main-nav__list">
 										<li class="main-nav__li"><a href="#"><span class="main-nav-wrapper">О КОМПАНИИ</span></a></li>
 										<li class="main-nav__li"><a href="#"><span class="main-nav-wrapper">КОНТАКТЫ</span></a></li>
 									</ul>
 								</nav>
+							</div>
+						</div>
+						<div class="mobile-menu">
+							<div class="mobile-menu__wrapper">
+								<nav class="mobile-menu__nav">
+									<ul class="mobile-menu__list">
+										<li class="mobile-menu__item"><a href="#">О компании</a></li>
+										<li class="mobile-menu__item"><a href="#">Контакты</a></li>
+									</ul>
+								</nav>
+								<div class="header-contacts header-contacts__mobile"><a class="phone-link" href="tel:83952404061">8 (3952) 40-40-61</a>
+									<div class="operation-mode">В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30</div><a class="callback-link" href="#callback-form">Заказать обратный звонок</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -89,7 +103,7 @@
 									</picture>
 									<figcaption class="products-list__text">
 										<h3 class="products-list__title">Кровельное покрытие</h3>
-										<div class="products-list__additional">Металлочерепицца или профнастил&nbsp;&mdash; защищают дом от&nbsp;влаги, проникновения<br> холодного воздуха и&nbsp;обладают теплоизолирующими свойствами</div>
+										<div class="products-list__additional">Металлочерепицца или профнастил&nbsp;&mdash; защищают дом от&nbsp;влаги, проникновения холодного воздуха и&nbsp;обладают теплоизолирующими свойствами</div>
 									</figcaption>
 								</figure>
 								<figure class="products-list__item products-fences viewport-checker-block hide-block">
@@ -113,8 +127,9 @@
 								<figure class="products-list__item products-drainage-systems viewport-checker-block hide-block">
 									<picture class="products-img">
 										<source media="(min-width: 1157px)" srcset="images/catalog5.webp 1x, images/catalog5_2.webp 2x" type="image/webp">
-										<source media="(max-width: 1156px)" srcset="images/catalog5_1156.webp 1x, images/catalog5_2x_1156.webp 2x" type="image/webp">
-										<source media="(max-width: 1156px)" srcset="images/catalog5_1156.jpg 1x, images/catalog5_2x_1156.jpg 2x" type="image/jpg"><img width="344" src="images/catalog5.jpg" srcset="images/catalog5.jpg 1x, images/catalog5_2.jpg 2x" alt="Водосточные системы">
+										<source media="(min-width: 1157px)" srcset="images/catalog5.jpg 1x, images/catalog5_2.jpg 2x" type="image/jpg">
+										<source media="(max-width: 1156px)" srcset="images/catalog5_1156.webp 1x, images/catalog5_1156_2.webp 2x" type="image/webp">
+										<source media="(max-width: 1156px)" srcset="images/catalog5_1156.jpg 1x, images/catalog5_1156_2.jpg 2x" type="image/jpg"><img width="344" src="images/catalog5.jpg" srcset="images/catalog5.jpg 1x, images/catalog5_2.jpg 2x" alt="Водосточные системы">
 									</picture>
 									<figcaption class="products-list__text">
 										<h3 class="products-list__title">Водосточные системы</h3>
@@ -163,10 +178,12 @@
 											</div>
 										</div>
 										<div class="form-item-wrapper">
-											<div class="form-item">
-												<input class="input-phone user-phone" type="tel" maxlength="18" minlength="18" required="required" placeholder="+7 (___) ___-__-__" name="phone"/>
-												<div class="button-submit-wrapper">
-													<button class="btn form-submit">Ок</button>
+											<div class="form-item__wrapper-viewportchecker">
+												<div class="form-item">
+													<input class="input-phone user-phone" type="tel" maxlength="18" minlength="18" required="required" placeholder="+7 (___) ___-__-__" name="phone"/>
+													<div class="button-submit-wrapper">
+														<button class="btn form-submit">Ок</button>
+													</div>
 												</div>
 											</div>
 											<div class="form-item-text">Нужен только для звонка. Без спама.</div>
@@ -301,8 +318,8 @@
 				</form>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1560683474339"></script>
-		<script src="js/main.js?v=1560683474339"></script>
+		<script src="js/vendor.js?v=1560764234339"></script>
+		<script src="js/main.js?v=1560764234339"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=70049068-bc39-44ad-b366-1739646384ea&amp;lang=ru_RU"></script>
 	</body>
 </html>

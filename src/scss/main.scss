@@ -296,7 +296,8 @@ body {
 .products-img img {
   height: 100%;
   object-fit: cover;
-  font-family: 'object-fit: cover;';
+  object-position: center;
+  font-family: 'object-fit: cover; object-position: center;';
 }
 
 .products-roofing {
@@ -347,7 +348,7 @@ body {
   padding: 46px 159px 46px 40px;
   height: 100%;
 
-  &.animateShake {
+  &.animateShake .form-item {
 	animation: shake-horizontal .8s ease;
   }
 }
@@ -513,6 +514,12 @@ body {
   & svg {
 	margin-top: -2px;
   }
+  //&:focus {
+  //  outline: none;
+  //}
+  //&:focus span {
+  //  border-bottom-color: rgba(43, 42, 40, .6);
+  //}
 }
 
 .prev span {
@@ -528,7 +535,7 @@ body {
   border-bottom-color: rgba(43, 42, 40, .6);
 }
 
-.product-selection.animation .form-item {
+.product-selection.animation .form-item__wrapper-viewportchecker {
   animation: shake-horizontal .4s ease;
 }
 
@@ -1041,6 +1048,67 @@ body {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+}
+.callback-form-wrapper ~ .layout-template-wrapper {
+  filter: blur(15px);
+}
+.burger-mobile {
+  width: 16px;
+  height: 14px;
+  position: relative;
+  margin-right: 16px;
+  margin-left: auto;
+  display: none;
+  flex-shrink: 0;
+}
+.burger-mobile.active {
+  & .burger-mobile__item:nth-child(2) {
+    opacity: 0;
+  }
+  & .burger-mobile__item:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  & .burger-mobile__item:nth-child(3) {
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+.burger-mobile__item {
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $color-white;
+  position: absolute;
+  left: 0;
+  transition: .3s ease;
+}
+.burger-mobile__item:nth-child(1) {
+  top: 0;
+}
+.burger-mobile__item:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger-mobile__item:nth-child(3) {
+  bottom: 0;
+}
+.open-mobile-menu {
+  & .mobile-menu {
+    display: block;
+    padding: 0 8px;
+  }
+  & .header-wrapper {
+    height: 100vh;
+    background-color: $color-body;
+  }
+}
+.mobile-menu {
+  display: none;
+}
+.mobile-menu__item a {
+  font-size: 16px;
 }
 
 @import "media";

@@ -1,5 +1,5 @@
 mixin header-content
-    .template-wrapper
+    .template-wrapper.header-contacts__wrapper
         .header-contacts
             a(href="tel:83952404061").phone-link 8 (3952) 40-40-61
             .operation-mode
@@ -30,6 +30,10 @@ mixin header-content
                     | </svg>
                 .logo-text
                     | Системы кровельных<br> и фасадных материалов
+                buttom.burger-mobile
+                    span.burger-mobile__item
+                    span.burger-mobile__item
+                    span.burger-mobile__item
                 nav.main-nav
                     ul.main-nav__list
                         li.main-nav__li
@@ -38,6 +42,19 @@ mixin header-content
                         li.main-nav__li
                             a(href="#")
                                 span.main-nav-wrapper КОНТАКТЫ
+        .mobile-menu
+            .mobile-menu__wrapper
+                nav.mobile-menu__nav
+                    ul.mobile-menu__list
+                        li.mobile-menu__item
+                            a(href="#") О компании
+                        li.mobile-menu__item
+                            a(href="#") Контакты
+                .header-contacts.header-contacts__mobile
+                    a(href="tel:83952404061").phone-link 8 (3952) 40-40-61
+                    .operation-mode
+                        | В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30
+                    a(href="#callback-form").callback-link Заказать обратный звонок
 mixin header(class_modification)
     if class_modification === undefined
         header(class= 'main-header')
