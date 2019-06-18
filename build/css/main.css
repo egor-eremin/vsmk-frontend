@@ -78,9 +78,9 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/*a:focus {*/
-/*    outline: thin dotted;*/
-/*}*/
+a:focus {
+  outline: thin dotted; }
+
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -6863,8 +6863,7 @@ body {
 .callback-link {
   font-size: 14px;
   line-height: 20px;
-  color: #1b1a1f;
-  opacity: .9; }
+  color: #1b1a1f; }
 
 .callback-link {
   -webkit-transition: .3s ease;
@@ -6877,7 +6876,8 @@ body {
   border-bottom-color: rgba(27, 26, 31, 0.6); }
 
 .operation-mode {
-  margin-right: 24px; }
+  margin-right: 24px;
+  opacity: .9; }
 
 .header-menu {
   background: #2b2a28;
@@ -6963,7 +6963,7 @@ body {
   background-image: url("../images/hover_1x.png");
   background-repeat: no-repeat;
   -webkit-background-size: 141px 56px;
-     -moz-background-size: 141px 56px;
+       -o-background-size: 141px 56px;
           background-size: 141px 56px;
   left: 50%;
   bottom: 0;
@@ -6996,7 +6996,7 @@ body {
   top: 0;
   background: url("../images/arrow_menu2.png") no-repeat;
   -webkit-background-size: 100% 100%;
-     -moz-background-size: 100%;
+       -o-background-size: 100%;
           background-size: 100%;
   -webkit-transform: translate(100%, 0);
      -moz-transform: translate(100%, 0);
@@ -7011,7 +7011,7 @@ body {
   position: absolute;
   background: url("../images/arrow_menu.svg") no-repeat;
   -webkit-background-size: 100% 100%;
-     -moz-background-size: 100%;
+       -o-background-size: 100%;
           background-size: 100%;
   top: 0;
   right: 0;
@@ -7734,7 +7734,7 @@ body {
 .callback {
   max-width: 368px;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
   background-color: #fff;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
@@ -8196,17 +8196,63 @@ body {
 
 .open-mobile-menu .mobile-menu {
   display: block;
-  padding: 0 8px; }
+  max-height: 226px;
+  height: auto;
+  overflow-y: auto; }
 
 .open-mobile-menu .header-wrapper {
   height: 100vh;
+  overflow: hidden;
   background-color: #f5f5f5; }
+
+.mobile-menu__wrapper {
+  padding: 0 8px; }
 
 .mobile-menu {
   display: none; }
 
 .mobile-menu__item a {
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  -moz-transition: .3s ease;
+  transition: .3s ease;
+  color: #0054b9; }
+  .mobile-menu__item a:hover {
+    color: #f33e3e; }
+
+.mobile-menu__nav {
+  padding-top: 30px;
+  padding-bottom: 35px; }
+
+.mobile-menu__item + .mobile-menu__item {
+  margin-top: 16px; }
+
+.header-contacts__mobile {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .header-contacts__mobile .operation-mode {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.67;
+    margin-bottom: 8px; }
+
+.no-scroll {
+  overflow: hidden; }
+
+.callback-form-wrapper.mfp-wrap {
+  overflow: hidden auto; }
 
 @media (max-width: 1156px) {
   .products-drainage-systems {
@@ -8215,6 +8261,35 @@ body {
     grid-area: 3 / 1 / 4 / 4; }
   .products-img {
     height: 240px; } }
+
+@media (max-width: 1024px) {
+  .footer-column1 {
+    display: none; }
+  .footer-column2 {
+    margin-left: 0; }
+  .footer-column3 {
+    margin-right: 0; }
+  .about-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .about-section__text {
+    margin-bottom: 30px; }
+  .about-section__map {
+    margin: 0;
+    width: 100%; }
+  .map-block {
+    width: 100%;
+    height: 400px; } }
 
 @media (max-width: 780px) {
   .products-list {
@@ -8231,8 +8306,6 @@ body {
     width: -moz-calc(50% - 15px);
     width: calc(50% - 15px);
     margin-bottom: 30px; }
-  .about-section {
-    display: none; }
   .products-roofing {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
@@ -8285,6 +8358,24 @@ body {
   .burger-mobile {
     display: block; }
   .logo-text {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .about-section__map {
+    display: none; }
+  .about-section__text {
+    margin-bottom: 0; } }
+
+@media (max-width: 480px) {
+  .main-h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 12px; }
+  .title-wrapper {
+    padding-top: 58px;
+    padding-bottom: 42px; }
+  .additional-title-text {
+    font-size: 16px;
+    line-height: 1.5; }
+  .first-page-img {
+    height: 312px; } }
 
 /*# sourceMappingURL=main.css.map */

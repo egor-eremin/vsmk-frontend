@@ -9,7 +9,32 @@
 	height: 240px;
   }
 }
-
+@media (max-width: 1024px) {
+  .footer-column1 {
+    display: none;
+  }
+  .footer-column2 {
+    margin-left: 0;
+  }
+  .footer-column3 {
+    margin-right: 0;
+  }
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-section__text {
+    margin-bottom: 30px;
+  }
+  .about-section__map {
+    margin: 0;
+    width: 100%;
+  }
+  .map-block {
+    width: 100%;
+    height: 400px;
+  }
+}
 @media (max-width: 780px) {
   .products-list {
     display: flex;
@@ -20,7 +45,7 @@
     margin-bottom: 30px;
   }
   .about-section {
-    display: none;
+    //display: none;
   }
   .products-roofing {
     order: 0;
@@ -77,5 +102,29 @@
   }
   .logo-text {
     margin-right: 0;
+  }
+  .about-section__map {
+    display: none;
+  }
+  .about-section__text {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main-h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .title-wrapper {
+    padding-top: 58px;
+    padding-bottom: 42px;
+  }
+  .additional-title-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .first-page-img {
+    height: 312px;
   }
 }

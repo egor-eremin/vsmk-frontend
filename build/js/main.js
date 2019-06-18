@@ -266,12 +266,25 @@ $(document).ready(function () {
       mainClass: 'callback-form-wrapper',
       removalDelay: 250,
       callbacks: {
+        open: function open() {
+          $('html').css('overflow', 'hidden');
+        },
         close: function close() {
+          $('html').removeAttr('style');
+
           if ($('.form-answer').hasClass('show-information')) {
             $('.form-input').val('');
             $('.callback-form__wrapper').removeClass('hide-information');
             $('.form-answer').removeClass('show-information');
           }
+
+          ;
+
+          if ($('.main-header').hasClass('open-mobile-menu')) {
+            closeMobileMenu();
+          }
+
+          ;
         }
       }
     });
@@ -282,9 +295,8 @@ $(document).ready(function () {
   })();
 
   (function fixedMenu() {
-    var coordinateMenu = $('.header-wrapper').offset().top; // console.log(coordinateMenu);
-
-    $(window).on('scroll', function () {
+    var coordinateMenu = $('.header-wrapper').offset().top;
+    $(window).scroll(function () {
       if ($(this).scrollTop() > coordinateMenu) {
         $('.header-wrapper').addClass('fixed');
         $('.fake-menu').addClass('show');
@@ -298,15 +310,43 @@ $(document).ready(function () {
   (function burgerMobileInit() {
     $('.burger-mobile').on('click', function () {
       if (!$(this).hasClass('active')) {
-        $(this).addClass('active');
-        $('.main-header').addClass('open-mobile-menu');
+        openMobileMenu();
+        calcVH();
       } else {
-        $(this).removeClass('active');
-        $('.main-header').removeClass('open-mobile-menu');
+        closeMobileMenu();
       }
     });
   })();
+
+  (function calculationHeight() {
+    window.addEventListener('onorientationchange', calcVH, true);
+    window.addEventListener('resize', calcVH, true);
+  })();
 });
+
+function openMobileMenu() {
+  $('.burger-mobile').addClass('active');
+  $('.main-header').addClass('open-mobile-menu');
+  $('body').addClass('no-scroll');
+}
+
+function closeMobileMenu() {
+  $('.burger-mobile').removeClass('active');
+  $('.main-header').removeClass('open-mobile-menu');
+  $('body').removeClass('no-scroll');
+  $('.header-wrapper').removeAttr('style');
+}
+
+function calcVH() {
+  var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  var thisElement = document.querySelector(".open-mobile-menu .header-wrapper");
+
+  if (thisElement) {
+    thisElement.setAttribute("style", "height:" + vH + "px;");
+  }
+}
+
+;
 
 function validationForm(formInit, formWrapper, textGood, animation) {
   $.validator.addMethod("minlenghtphone", function (value, element) {
