@@ -92,7 +92,6 @@ $(document).ready(function () {
         });
         $('.product-selection:not(.other-callback)').viewportChecker({
             classToAdd: 'animateShake',
-            // repeat: true,
             offset: '40%',
         });
     })();
@@ -139,15 +138,15 @@ $(document).ready(function () {
         $('.burger-mobile').on('click', function () {
            if (!$(this).hasClass('active')) {
                openMobileMenu();
-               calcVH();
+               // calcVH();
            } else {
                closeMobileMenu();
            }
         });
     })();
     (function calculationHeight() {
-        window.addEventListener('onorientationchange', calcVH, true);
-        window.addEventListener('resize', calcVH, true);
+        // window.addEventListener('onorientationchange', calcVH, true);
+        // window.addEventListener('resize', calcVH, true);
     })();
 });
 

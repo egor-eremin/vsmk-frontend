@@ -34,7 +34,7 @@ body {
 .template-wrapper {
   max-width: 1126px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -298,6 +298,7 @@ body {
   object-fit: cover;
   object-position: center;
   font-family: 'object-fit: cover; object-position: center;';
+  width: 100%;
 }
 
 .products-roofing {
@@ -345,11 +346,11 @@ body {
   border-radius: 4px;
   box-shadow: 0 2px 14px 0 rgba(47, 51, 77, 0.25);
   background-color: $color-white;
-  padding: 46px 159px 46px 40px;
+  padding: 46px 157px 46px 40px;
   height: 100%;
 
   &.animateShake .form-item {
-	animation: shake-horizontal .8s ease;
+	animation: shake-horizontal .8s ease forwards;
   }
 }
 
@@ -1143,6 +1144,9 @@ body {
 }
 .callback-form-wrapper.mfp-wrap {
   overflow: hidden auto;
+}
+.product-selection-text {
+  display: block;
 }
 
 @import "media";

@@ -254,7 +254,6 @@ $(document).ready(function () {
     });
     $('.product-selection:not(.other-callback)').viewportChecker({
       classToAdd: 'animateShake',
-      // repeat: true,
       offset: '40%'
     });
   })();
@@ -310,17 +309,15 @@ $(document).ready(function () {
   (function burgerMobileInit() {
     $('.burger-mobile').on('click', function () {
       if (!$(this).hasClass('active')) {
-        openMobileMenu();
-        calcVH();
+        openMobileMenu(); // calcVH();
       } else {
         closeMobileMenu();
       }
     });
   })();
 
-  (function calculationHeight() {
-    window.addEventListener('onorientationchange', calcVH, true);
-    window.addEventListener('resize', calcVH, true);
+  (function calculationHeight() {// window.addEventListener('onorientationchange', calcVH, true);
+    // window.addEventListener('resize', calcVH, true);
   })();
 });
 
