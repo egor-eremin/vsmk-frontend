@@ -515,12 +515,6 @@ body {
   & svg {
 	margin-top: -2px;
   }
-  //&:focus {
-  //  outline: none;
-  //}
-  //&:focus span {
-  //  border-bottom-color: rgba(43, 42, 40, .6);
-  //}
 }
 
 .prev span {
@@ -1053,13 +1047,15 @@ body {
   filter: blur(15px);
 }
 .burger-mobile {
-  width: 16px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   position: relative;
   margin-right: 16px;
   margin-left: auto;
   display: none;
   flex-shrink: 0;
+  justify-content: flex-end;
+  align-items: center;
 }
 .burger-mobile.active {
   & .burger-mobile__item:nth-child(2) {
@@ -1141,12 +1137,23 @@ body {
 }
 .no-scroll {
   overflow: hidden;
+  position: fixed;
+  height: 100vh;
 }
 .callback-form-wrapper.mfp-wrap {
   overflow: hidden auto;
 }
 .product-selection-text {
   display: block;
+}
+.burger-mobile__list {
+  width: 16px;
+  height: 14px;
+  position: relative;
+  display: block;
+}
+.current-phone {
+  display: inline-flex;
 }
 
 @import "media";

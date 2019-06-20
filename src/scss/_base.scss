@@ -53,6 +53,7 @@ label {
 }
 input {
 	border: none;
+  	-webkit-appearance: none;
 }
 input::-webkit-input-placeholder       {color: $color-placeholder; opacity: 1; transition: opacity 0.3s ease;}
 input::-moz-placeholder                {color: $color-placeholder; opacity: 1; transition: opacity 0.3s ease;}

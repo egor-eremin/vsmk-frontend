@@ -195,11 +195,9 @@ $(document).ready(function () {
   })();
 
   (function addPhoneMask() {
-    // $('.user-phone').mask('+7 (000) 000-00-00', {
-    //     placeholder: "+7 (___) ___-__-__",
-    //     });
     $('.user-phone').inputmask("+7 (999) 999-99-99", {
-      placeholder: "_"
+      placeholder: "_",
+      showMaskOnFocus: false
     });
   })();
 
@@ -254,7 +252,11 @@ $(document).ready(function () {
     });
     $('.product-selection:not(.other-callback)').viewportChecker({
       classToAdd: 'animateShake',
-      offset: '40%'
+      offset: '40%',
+      removeClassAfterAnimation: true // callbackFunction: function () {
+      //     $('.product-selection:not(.other-callback)').addClass('');
+      // },
+
     });
   })();
 
@@ -307,11 +309,14 @@ $(document).ready(function () {
   })();
 
   (function burgerMobileInit() {
+    var windowCoordinate;
     $('.burger-mobile').on('click', function () {
       if (!$(this).hasClass('active')) {
+        windowCoordinate = $(window).scrollTop();
         openMobileMenu(); // calcVH();
       } else {
         closeMobileMenu();
+        $(window).scrollTop(windowCoordinate);
       }
     });
   })();
@@ -319,18 +324,22 @@ $(document).ready(function () {
   (function calculationHeight() {// window.addEventListener('onorientationchange', calcVH, true);
     // window.addEventListener('resize', calcVH, true);
   })();
+
+  media('(min-width: 780px)', function () {
+    closeMobileMenu();
+  });
 });
 
 function openMobileMenu() {
   $('.burger-mobile').addClass('active');
   $('.main-header').addClass('open-mobile-menu');
-  $('body').addClass('no-scroll');
+  $('html').addClass('no-scroll');
 }
 
 function closeMobileMenu() {
   $('.burger-mobile').removeClass('active');
   $('.main-header').removeClass('open-mobile-menu');
-  $('body').removeClass('no-scroll');
+  $('html').removeClass('no-scroll');
   $('.header-wrapper').removeAttr('style');
 }
 
