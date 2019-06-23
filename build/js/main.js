@@ -233,12 +233,7 @@ $(document).ready(function () {
           iconImageOffset: [-14, -48]
         });
         myMap.geoObjects.add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom'); // media ('all and (min-width: 1025px)', function () {
-        //     myMap.setCenter([52.278407791991356,104.21523449667427]);
-        // })
-        // media ('all and (max-width: 1024px)', function () {
-        //     myMap.setCenter([52.278407791991356,104.21523449667427]);
-        // })
+        myMap.behaviors.disable('scrollZoom');
       };
 
       ymaps.ready(init);
@@ -269,6 +264,15 @@ $(document).ready(function () {
       callbacks: {
         open: function open() {
           $('html').css('overflow', 'hidden');
+          $('.callback__phone-input').focus();
+
+          if ($('.main-header').hasClass('open-mobile-menu')) {
+            var windowCoordinate = closeMobileMenu();
+            $('.mfp-wrap.callback-form-wrapper').css('top', '' + -windowCoordinate + 'px');
+            $(window).scrollTop(-windowCoordinate);
+          }
+
+          ;
         },
         close: function close() {
           $('html').removeAttr('style');
@@ -277,12 +281,6 @@ $(document).ready(function () {
             $('.form-input').val('');
             $('.callback-form__wrapper').removeClass('hide-information');
             $('.form-answer').removeClass('show-information');
-          }
-
-          ;
-
-          if ($('.main-header').hasClass('open-mobile-menu')) {
-            closeMobileMenu();
           }
 
           ;
@@ -313,10 +311,10 @@ $(document).ready(function () {
     $('.burger-mobile').on('click', function () {
       if (!$(this).hasClass('active')) {
         windowCoordinate = $(window).scrollTop();
-        openMobileMenu(); // calcVH();
+        openMobileMenu(windowCoordinate); // calcVH();
       } else {
-        closeMobileMenu();
-        $(window).scrollTop(windowCoordinate);
+        windowCoordinate = closeMobileMenu();
+        $(window).scrollTop(-windowCoordinate);
       }
     });
   })();
@@ -330,17 +328,22 @@ $(document).ready(function () {
   });
 });
 
-function openMobileMenu() {
+function openMobileMenu(coordinateWindow) {
   $('.burger-mobile').addClass('active');
   $('.main-header').addClass('open-mobile-menu');
-  $('html').addClass('no-scroll');
+  $('body').addClass('no-scroll');
+  $('body').css('top', '-' + coordinateWindow + 'px');
 }
 
 function closeMobileMenu() {
+  var bodyTop = parseInt($('body').css('top'));
   $('.burger-mobile').removeClass('active');
   $('.main-header').removeClass('open-mobile-menu');
-  $('html').removeClass('no-scroll');
+  $('body').removeClass('no-scroll');
+  $('body').removeAttr('style');
   $('.header-wrapper').removeAttr('style');
+  return bodyTop;
+  $(window).scrollTop(-bodyTop);
 }
 
 function calcVH() {
@@ -443,8 +446,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery-validation */ "./node_modules/jquery-validation/dist/jquery.validate.js");
 /* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
-/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var focus_visible__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-visible */ "./node_modules/focus-visible/dist/focus-visible.js");
+/* harmony import */ var focus_visible__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_visible__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
+/* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -452,7 +457,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-object_fit_images__WEBPACK_IMPORTED_MODULE_6___default()();
+
+object_fit_images__WEBPACK_IMPORTED_MODULE_7___default()();
 svg4everybody__WEBPACK_IMPORTED_MODULE_1___default()();
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_2___default.a;

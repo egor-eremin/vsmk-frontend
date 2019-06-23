@@ -5,7 +5,7 @@ append vars
 	- meta.viewport = "width=device-width, initial-scale=1"
 
 block content
-	+header
+	+header('undefined', 'contacts', 'about')
 	main.main-content
 		.template-wrapper
 			section.constructor
@@ -15,7 +15,9 @@ block content
 				.constructor-wrapper
 					.constructor-first-page
 						picture.first-page-img
-							source(srcset="images/home_1x.webp 1x, images/home_2x.webp 2x" type="image/webp")
+							source(media="(min-width: 780px)" srcset="images/home_1x.webp 1x, images/home_2x.webp 2x" type="image/webp")
+							source(media="(min-width: 780px)" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" type="image/jpg")
+							source(media="(max-width: 779px)" srcset="images/home_1x_780.jpg 1x, images/home_2x_780.jpg 2x" type="image/jpg")
 							img(width="1096" src="images/home_1x.jpg" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" alt="Материалы для дома")
 						button.btn.btn-start-constructor Начать
 			section.products

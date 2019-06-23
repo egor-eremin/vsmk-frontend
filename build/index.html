@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>vsmk</title>
-		<link rel="stylesheet" href="css/main.css?v=1561024512425">
+		<link rel="stylesheet" href="css/main.css?v=1561300244460">
 	</head>
 	<body>
 		<div class="layout-template-wrapper">
 			<div class="layout-template-wrapper__inner">
-				<header class="main-header">
+				<header class="main-header undefined">
 					<div class="template-wrapper header-contacts__wrapper">
 						<div class="header-contacts"><a class="phone-link" href="tel:83952404061">8 (3952) 40-40-61</a>
 							<div class="operation-mode">В будни c 9:00 до 18:00, Сб - Вс с 10:00 до 17:30</div><a class="callback-link" href="#callback-form">Заказать обратный звонок</a>
@@ -19,8 +19,7 @@
 					<div class="template-wrapper header-wrapper">
 						<div class="header-menu">
 							<div class="header-menu-background"></div>
-							<div class="header-menu__wrapper">
-								<div class="main-logo">
+							<div class="header-menu__wrapper"><a class="main-logo" href="/">
 									<svg width="126px" height="34px" viewBox="0 0 126 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									        <g transform="translate(-82.000000, -59.000000)">
@@ -38,14 +37,13 @@
 									            </g>
 									        </g>
 									    </g>
-									</svg>
-								</div>
+									</svg></a>
 								<div class="logo-text">Системы кровельных<br> и фасадных материалов</div>
 								<buttom class="burger-mobile"><span class="burger-mobile__list"><span class="burger-mobile__item"></span><span class="burger-mobile__item"></span><span class="burger-mobile__item"></span></span></buttom>
 								<nav class="main-nav">
 									<ul class="main-nav__list">
-										<li class="main-nav__li"><a href="#"><span class="main-nav-wrapper">О КОМПАНИИ</span></a></li>
-										<li class="main-nav__li"><a href="#"><span class="main-nav-wrapper">КОНТАКТЫ</span></a></li>
+										<li class="main-nav__li"><a href="about.html"><span class="main-nav-wrapper">О КОМПАНИИ</span></a></li>
+										<li class="main-nav__li"><a href="contact.html"><span class="main-nav-wrapper">КОНТАКТЫ</span></a></li>
 									</ul>
 								</nav>
 							</div>
@@ -54,8 +52,8 @@
 							<div class="mobile-menu__wrapper">
 								<nav class="mobile-menu__nav">
 									<ul class="mobile-menu__list">
-										<li class="mobile-menu__item"><a href="#">О компании</a></li>
-										<li class="mobile-menu__item"><a href="#">Контакты</a></li>
+										<li class="mobile-menu__item"><a href="about.html">О компании</a></li>
+										<li class="mobile-menu__item"><a href="contact.html">Контакты</a></li>
 									</ul>
 								</nav>
 								<div class="header-contacts header-contacts__mobile"><a class="phone-link" href="tel:83952404061">8 (3952) 40-40-61</a>
@@ -76,7 +74,9 @@
 							<div class="constructor-wrapper">
 								<div class="constructor-first-page">
 									<picture class="first-page-img">
-										<source srcset="images/home_1x.webp 1x, images/home_2x.webp 2x" type="image/webp"><img width="1096" src="images/home_1x.jpg" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" alt="Материалы для дома">
+										<source media="(min-width: 780px)" srcset="images/home_1x.webp 1x, images/home_2x.webp 2x" type="image/webp">
+										<source media="(min-width: 780px)" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" type="image/jpg">
+										<source media="(max-width: 779px)" srcset="images/home_1x_780.jpg 1x, images/home_2x_780.jpg 2x" type="image/jpg"><img width="1096" src="images/home_1x.jpg" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" alt="Материалы для дома">
 									</picture>
 									<button class="btn btn-start-constructor">Начать</button>
 								</div>
@@ -253,8 +253,8 @@
 							<div class="footer-column footer-column1">
 								<nav class="footer-menu">
 									<ul class="footer-menu__list">
-										<li class="footer-menu__item"><a href="#">О компании</a></li>
-										<li class="footer-menu__item"><a href="#">Контакты</a></li>
+										<li class="footer-menu__item"><a href="about.html">О компании</a></li>
+										<li class="footer-menu__item"><a href="contact.html">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -318,8 +318,8 @@
 				</form>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1561024512429"></script>
-		<script src="js/main.js?v=1561024512429"></script>
+		<script src="js/vendor.js?v=1561300244467"></script>
+		<script src="js/main.js?v=1561300244467"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=70049068-bc39-44ad-b366-1739646384ea&amp;lang=ru_RU"></script>
 	</body>
 </html>

@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'jquery-mask-plugin';
 import 'magnific-popup';
 import 'jquery-validation';
+import 'focus-visible';
 import objectFitImages from 'object-fit-images';
 
 objectFitImages();

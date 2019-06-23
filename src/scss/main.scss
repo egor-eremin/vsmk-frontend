@@ -260,7 +260,7 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: $color-yellow-btn-hover;
-  outline: none;
+  //outline: none;
 }
 
 .btn:active {
@@ -425,17 +425,14 @@ body {
 }
 
 .form-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 4px 4px 0;
-  flex-shrink: 0;
-  transition: .3s ease;
-  width: 98px;
-  margin-top: -1px;
-  height: calc(100% + 1px);
-  box-shadow: 0 1px 0 0 rgba(221, 181, 39, 1);
-
+	border-radius: 0 4px 4px 0;
+	transition: .3s ease;
+	width: 98px;
+	margin-top: -1px;
+	height: calc(100% + 1px);
+	box-shadow: 0 1px 0 0 rgba(221, 181, 39, 1);
+	display: block;
+  	text-align: center;
   &:active {
 	margin-top: 2px;
 	height: calc(100% - 4px);
@@ -1101,6 +1098,9 @@ body {
     height: 100vh;
     overflow: hidden;
     background-color: $color-body;
+	position: fixed;
+	top: 0;
+	z-index: 300;
   }
 }
 .mobile-menu__wrapper {
@@ -1154,6 +1154,15 @@ body {
 }
 .current-phone {
   display: inline-flex;
+}
+.main-header .main-logo {
+  pointer-events: none;
+}
+.other-page .main-logo {
+  pointer-events: auto;
+}
+.content-picture {
+  display: none;
 }
 
 @import "media";

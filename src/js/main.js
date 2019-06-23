@@ -72,14 +72,6 @@ $(document).ready(function () {
                 myMap.geoObjects.add(myPlacemark);
                 myMap.behaviors.disable('scrollZoom');
 
-
-                // media ('all and (min-width: 1025px)', function () {
-                //     myMap.setCenter([52.278407791991356,104.21523449667427]);
-                // })
-                // media ('all and (max-width: 1024px)', function () {
-                //     myMap.setCenter([52.278407791991356,104.21523449667427]);
-                // })
-
             }
         }
     })();
@@ -106,6 +98,13 @@ $(document).ready(function () {
             callbacks: {
                 open: function () {
                     $('html').css('overflow','hidden');
+                    $('.callback__phone-input').focus();
+                    if ($('.main-header').hasClass('open-mobile-menu')) {
+                        var windowCoordinate = closeMobileMenu();
+
+                        $('.mfp-wrap.callback-form-wrapper').css('top', '' + (-windowCoordinate) + 'px');
+                        $(window).scrollTop(-windowCoordinate);
+                    };
                 },
                 close: function () {
                     $('html').removeAttr('style');
@@ -114,9 +113,7 @@ $(document).ready(function () {
                       $('.callback-form__wrapper').removeClass('hide-information');
                       $('.form-answer').removeClass('show-information');
                   };
-                    if ($('.main-header').hasClass('open-mobile-menu')) {
-                      closeMobileMenu();
-                  };
+
               }
             },
         });
@@ -142,11 +139,11 @@ $(document).ready(function () {
         $('.burger-mobile').on('click', function () {
            if (!$(this).hasClass('active')) {
                windowCoordinate = $(window).scrollTop();
-               openMobileMenu();
+               openMobileMenu(windowCoordinate);
                // calcVH();
            } else {
-               closeMobileMenu();
-               $(window).scrollTop(windowCoordinate);
+               windowCoordinate = closeMobileMenu();
+               $(window).scrollTop(-windowCoordinate);
            }
         });
     })();
@@ -161,16 +158,22 @@ $(document).ready(function () {
 });
 
 
-function openMobileMenu() {
+function openMobileMenu(coordinateWindow) {
     $('.burger-mobile').addClass('active');
     $('.main-header').addClass('open-mobile-menu');
-    $('html').addClass('no-scroll');
+    $('body').addClass('no-scroll');
+    $('body').css('top', '-' + coordinateWindow + 'px');
 }
 function closeMobileMenu() {
+    var bodyTop = parseInt($('body').css('top'));
+
     $('.burger-mobile').removeClass('active');
     $('.main-header').removeClass('open-mobile-menu');
-    $('html').removeClass('no-scroll');
+    $('body').removeClass('no-scroll');
+    $('body').removeAttr('style');
     $('.header-wrapper').removeAttr('style');
+    return bodyTop;
+    $(window).scrollTop(-bodyTop);
 }
 function calcVH() {
     var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
