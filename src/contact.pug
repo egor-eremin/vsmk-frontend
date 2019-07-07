@@ -3,6 +3,14 @@ extends pug/base
 append vars
     - title = "vsmk"
     - meta.viewport = "width=device-width, initial-scale=1"
+    - link.appleTouchIcon180x180 = "favicon/apple-touch-icon.png"
+    - link.icon16x16 = "favicon/favicon-16x16.png"
+    - link.icon32x32 = "favicon/favicon-32x32.png"
+    - link.manifest = "favicon/site.webmanifest"
+    - link.maskIcon.href = "favicon/safari-pinned-tab.svg"
+    - link.maskIcon.color = "#fff84d"
+    - meta.msapplicationTileColor = "#ffffff"
+    - meta.themeColor = "#ffffff"
 
 block content
     +header('other-page')

@@ -1015,17 +1015,18 @@ body {
 .contact {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .contact__text {
-  max-width: 386px;
+  max-width: 456px;
   width: 100%;
-  flex-shrink: 0;
-  margin-right: 152px;
+  //flex-shrink: 0;
+  padding-right: 30px;
 }
 
 .contact__map {
-  width: calc(100% - 538px);
+  width: 558px;
   padding-top: 11px;
 
   & .map-block {
@@ -1136,9 +1137,9 @@ body {
   }
 }
 .no-scroll {
-  overflow: hidden;
-  position: fixed;
-  height: 100vh;
+  overflow: hidden !important;
+  position: fixed !important;
+  height: 100vh !important;
 }
 .callback-form-wrapper.mfp-wrap {
   overflow: hidden auto;
@@ -1163,6 +1164,7 @@ body {
 }
 .content-picture {
   display: none;
+  background: rgb(255, 216, 77);
 }
 
 @import "media";

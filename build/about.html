@@ -4,8 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
 		<title>vsmk</title>
-		<link rel="stylesheet" href="css/main.css?v=1561300243923">
+		<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+		<link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#fff84d">
+		<link rel="stylesheet" href="css/main.css?v=1562504297927">
 	</head>
 	<body>
 		<div class="layout-template-wrapper">
@@ -70,7 +77,11 @@
 							<div class="content-text">
 								<h1>Группа компаний «ВСМК»</h1>
 								<picture class="about-picture content-picture">
-									<source srcset="images/o_nas_1x.webp 1x, images/o_nas_2x.webp 2x" type="image/webp"><img width="384" src="images/o_nas_1x.png" srcset="images/o_nas_1x.png 1x, images/o_nas_2x.png 2x" alt="О нас">
+									<source media="(max-width: 640px)" srcset="images/o_nas_1x_640.webp 1x, images/o_nas_2x_640.webp 2x" type="image/webp">
+									<source media="(max-width: 640px)" srcset="images/o_nas_1x_640.jpg 1x, images/o_nas_2x_640.jpg 2x" type="image/jpg">
+									<source media="(max-width: 900px)" srcset="images/o_nas_1x_900.webp 1x, images/o_nas_2x_900.webp 2x" type="image/webp">
+									<source media="(max-width: 900px)" srcset="images/o_nas_1x_900.jpg 1x, images/o_nas_2x_900.jpg 2x" type="image/jpg">
+									<source media="(min-width: 901px)" srcset="/"><img width="852" src="images/o_nas_1x_900.jpg" srcset="images/o_nas_1x_900.jpg 1x, images/o_nas_2x_900.jpg 2x" alt="О нас">
 								</picture>
 								<p>Поставщик кровельных и фасадных материалов в г. Иркутске с 2000 года.</p>
 								<p>Основное направление компании&nbsp;&mdash; собственное производство и&nbsp;реализация стройматериалов: профнастил, рулонная сталь, металлочерепица, металлосайдинг, арматурный прокат, винтовые сваи, водосточные системы и&nbsp;многое другое.</p>
@@ -255,8 +266,8 @@
 				</form>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1561300243926"></script>
-		<script src="js/main.js?v=1561300243926"></script>
+		<script src="js/vendor.js?v=1562504297929"></script>
+		<script src="js/main.js?v=1562504297929"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=70049068-bc39-44ad-b366-1739646384ea&amp;lang=ru_RU"></script>
 	</body>
 </html>

@@ -3,6 +3,14 @@ extends pug/base
 append vars
 	- title = "vsmk"
 	- meta.viewport = "width=device-width, initial-scale=1"
+	- link.appleTouchIcon180x180 = "favicon/apple-touch-icon.png"
+	- link.icon16x16 = "favicon/favicon-16x16.png"
+	- link.icon32x32 = "favicon/favicon-32x32.png"
+	- link.manifest = "favicon/site.webmanifest"
+	- link.maskIcon.href = "favicon/safari-pinned-tab.svg"
+	- link.maskIcon.color = "#fff84d"
+	- meta.msapplicationTileColor = "#ffffff"
+	- meta.themeColor = "#ffffff"
 
 block content
 	+header('other-page')
@@ -12,8 +20,12 @@ block content
 				.content-text
 					h1 Группа компаний «ВСМК»
 					picture.about-picture.content-picture
-						source(srcset="images/o_nas_1x.webp 1x, images/o_nas_2x.webp 2x" type="image/webp")
-						img(width="384" src="images/o_nas_1x.png" srcset="images/o_nas_1x.png 1x, images/o_nas_2x.png 2x" alt="О нас")
+						source(media="(max-width: 640px)" srcset="images/o_nas_1x_640.webp 1x, images/o_nas_2x_640.webp 2x" type="image/webp")
+						source(media="(max-width: 640px)" srcset="images/o_nas_1x_640.jpg 1x, images/o_nas_2x_640.jpg 2x" type="image/jpg")
+						source(media="(max-width: 900px)" srcset="images/o_nas_1x_900.webp 1x, images/o_nas_2x_900.webp 2x" type="image/webp")
+						source(media="(max-width: 900px)" srcset="images/o_nas_1x_900.jpg 1x, images/o_nas_2x_900.jpg 2x" type="image/jpg")
+						source(media="(min-width: 901px)" srcset="/")
+						img(width="852" src="images/o_nas_1x_900.jpg" srcset="images/o_nas_1x_900.jpg 1x, images/o_nas_2x_900.jpg 2x" alt="О нас")
 					p Поставщик кровельных и фасадных материалов в г. Иркутске с 2000 года.
 					p Основное направление компании&nbsp;&mdash; собственное производство и&nbsp;реализация стройматериалов: профнастил, рулонная сталь, металлочерепица, металлосайдинг, арматурный прокат, винтовые сваи, водосточные системы и&nbsp;многое другое.
 					p Подходят для частных и&nbsp;многоквартирных домов, гаражей, навесов, садовых построек и&nbsp;других типов зданий.

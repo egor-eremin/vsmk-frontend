@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 .js-focus-visible:focus {
   outline: 3px solid rgba(131,192,253,0.5);

@@ -29,7 +29,7 @@ $(document).ready(function () {
     (function addPhoneMask() {
 		$('.user-phone').inputmask("+7 (999) 999-99-99", {
 			placeholder: "_",
-            showMaskOnFocus: false,
+            // showMaskOnFocus: false,
 		})
     })();
     (function validationInputForm() {
@@ -97,17 +97,23 @@ $(document).ready(function () {
 			removalDelay: 250,
             callbacks: {
                 open: function () {
-                    $('html').css('overflow','hidden');
+                    var windowCoordinate = closeMobileMenu();
+
+                    console.log(windowCoordinate);
+                    $('html').css({'overflow':'hidden', 'position': 'fixed', 'top': '' + (-windowCoordinate) + ''});
                     $('.callback__phone-input').focus();
                     if ($('.main-header').hasClass('open-mobile-menu')) {
-                        var windowCoordinate = closeMobileMenu();
-
+                        console.log('open');
                         $('.mfp-wrap.callback-form-wrapper').css('top', '' + (-windowCoordinate) + 'px');
                         $(window).scrollTop(-windowCoordinate);
                     };
                 },
                 close: function () {
+                    var htmlCoordinate = $('html').css('top');
+
+                    console.log('close');
                     $('html').removeAttr('style');
+                    $(window).scrollTop(-htmlCoordinate);
                     if ($('.form-answer').hasClass('show-information')) {
                       $('.form-input').val('');
                       $('.callback-form__wrapper').removeClass('hide-information');
