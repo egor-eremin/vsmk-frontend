@@ -9,7 +9,6 @@ $(document).ready(function () {
             elementParent.addClass('focus');
 
         });
-
         $('.input-phone').blur(function () {
             elementParent.removeClass('focus');
         });
