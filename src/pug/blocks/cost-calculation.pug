@@ -1,0 +1,36 @@
+mixin calculator-form-content
+	.callback-form__wrapper
+		.callback-title
+			| Расчёт стоимости
+			| строительных материалов
+		.callback__item
+			label.callback-label(for="callback-phone") Мобильный телефон
+			input.user-phone.form-input.callback__phone-input.user-phone(type="tel" placeholder="+7 (___) ___-__-__" maxlength="18" minlength="18" required name="phone")
+		.callback__item
+			button.btn.callback-btn Отправить
+		.callback__text Позвоним в течение 10 минут
+	.form-answer
+		.information-icon.information-icon_with-new-margin
+			| <svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			|     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			|         <g transform="translate(-593.000000, -330.000000)" fill="#FFFFFF">
+			|             <g>
+			|                 <g transform="translate(416.000000, 272.000000)">
+			|                     <g transform="translate(164.000000, 48.000000)">
+			|                         <path d="M13,21.1228 C14.7936575,23.4428 17.2811007,27.0869333 18.9894291,30 C22.886213,22.7648 26.8255942,16.4934667 31,11.2922667 L29.7296047,10 C26.0995581,13.8664 21.9784997,19.9682667 18.871984,24.9682667 C17.4092959,23.0296 16.277577,21.5996 14.5054199,19.4808 L13,21.1228" id="Fill-1-Copy"></path>
+			|                     </g>
+			|                 </g>
+			|             </g>
+			|         </g>
+			|     </g>
+			| </svg>
+		.answer-title Спасибо за заявку
+		.answer-text
+			|    Позвоним в течение 10 минут на номер <span class="current-phone"></span>
+mixin cost-calculator-form
+	if class_modification === undefined
+		form#calculator-form(class='callback mfp-hide')
+			+calculator-form-content
+	else
+		form#calculator-form(class='callback mfp-hide' + class_modification)
+			+calculator-form-content

@@ -28,6 +28,244 @@ block content
 							source(media="(max-width: 779px)" srcset="images/home_1x_780.jpg 1x, images/home_2x_780.jpg 2x" type="image/jpg")
 							img(width="1096" src="images/home_1x.jpg" srcset="images/home_1x.jpg 1x, images/home_2x.jpg 2x" alt="Материалы для дома")
 						button.btn.btn-start-constructor Начать
+					.constructor-start-page
+						.constructor-aside
+							.constructor-tabbed
+								ul.constructor-list
+									li.constructor-list__item
+										a(href="#section-tabs1") Крыша
+									li.constructor-list__item
+										a(href="#section-tabs2") Кровля
+									li.constructor-list__item
+										a(href="#section-tabs3") Фасад
+								#section-tabs1.section-tabs-controls.custom-scroll(data-object-property="roof")
+									.section-tabs-title Вид
+									.control-constructor(data-object-property="view")
+										button.control-constructor__item-button.control-button.active(data-object-property="view__1")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Мансардная").constructor-img
+											.constructor-text Мансардная
+										button.control-constructor__item-button.control-button(data-object-property="view__2")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Двускатная").constructor-img
+											.constructor-text Двускатная
+										button.control-constructor__item-button.control-button(data-object-property="view__3")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Шатровая").constructor-img
+											.constructor-text Шатровая
+										button.control-constructor__item-button.control-button(data-object-property="view__4")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Вальмовая").constructor-img
+											.constructor-text Вальмовая
+										button.control-constructor__item-button.control-button(data-object-property="view__5")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Многоскатная").constructor-img
+											.constructor-text Многоскатная
+								#section-tabs2.section-tabs-controls.custom-scroll(data-object-property="roofing")
+									.section-tabs-title Материал
+									.control-constructor(data-object-property="material")
+										button.control-constructor__item-radio.control-button.active(data-object-property="material__1")
+											span
+												|Профнастил
+										button.control-constructor__item-radio.control-button(data-object-property="material__2")
+											span
+												|Металлочерепица
+									.section-tabs-title Форма
+									.control-constructor(data-object-property="shape")
+										button.control-constructor__item-button.control-button.active(data-object-property="shape__1")
+											picture.img-container
+												source(srcset="images/control-form1_1x.webp 1x, images/control-form1_2x.webp 2x" type="image/webp")
+												img(src="images/control-form1_1x.jpg" srcset="images/control-form1_1x.jpg 1x, images/control-form1_2x.jpg 2x" alt="Форма 1").constructor-img
+										button.control-constructor__item-button.control-button(data-object-property="shape__2")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Форма 2").constructor-img
+									.section-tabs-title Цвет
+									.control-constructor(data-object-property="color")
+										button.control-constructor__item-color.control-button.roof-color-red.active(data-object-property="color__1")
+										button.control-constructor__item-color.control-button.roof-color-green(data-object-property="color__2")
+										button.control-constructor__item-color.control-button.roof-color-brown(data-object-property="color__3")
+										button.control-constructor__item-color.control-button.roof-color-blue(data-object-property="color__4")
+										button.control-constructor__item-color.control-button.roof-color-light-black(data-object-property="color__5")
+										button.control-constructor__item-color.control-button.roof-color-grey(data-object-property="color__6")
+								#section-tabs3.section-tabs-controls.custom-scroll(data-object-property="facade")
+									.section-tabs-title Материал
+									.control-constructor(data-object-property="material")
+										button.control-constructor__item-radio.control-button.active(data-object-property="material__1")
+											span
+												|Профнастил
+										button.control-constructor__item-radio.control-button(data-object-property="material__2")
+											span
+												|Сайдинг
+									.section-tabs-title Форма
+									.control-constructor(data-object-property="shape")
+										button.control-constructor__item-button.control-button.active(data-object-property="shape__1")
+											picture.img-container
+												source(srcset="images/control-form1_1x.webp 1x, images/control-form1_2x.webp 2x" type="image/webp")
+												img(src="images/control-form1_1x.jpg" srcset="images/control-form1_1x.jpg 1x, images/control-form1_2x.jpg 2x" alt="Форма 1").constructor-img
+										button.control-constructor__item-button.control-button(data-object-property="shape__2")
+											picture.img-container
+												source(srcset="images/control-form2_1x.webp 1x, images/control-form2_2x.webp 2x" type="image/webp")
+												img(src="images/control-form2_1x.jpg" srcset="images/control-form2_1x.jpg 1x, images/control-form2_2x.jpg 2x" alt="Форма 2").constructor-img
+										button.control-constructor__item-button.control-button(data-object-property="shape__3")
+											picture.img-container
+												source(srcset="images/control-form1_1x.webp 1x, images/control-form1_2x.webp 2x" type="image/webp")
+												img(src="images/control-form1_1x.jpg" srcset="images/control-form1_1x.jpg 1x, images/control-form1_2x.jpg 2x" alt="Форма 1").constructor-img
+									.section-tabs-title Цвет
+									.control-constructor(data-object-property="color")
+										button.control-constructor__item-color.control-button.roof-color-red.active(data-object-property="color__1")
+										button.control-constructor__item-color.control-button.roof-color-green(data-object-property="color__2")
+										button.control-constructor__item-color.control-button.roof-color-brown(data-object-property="color__3")
+										button.control-constructor__item-color.control-button.roof-color-blue(data-object-property="color__4")
+										button.control-constructor__item-color.control-button.roof-color-light-black(data-object-property="color__5")
+										button.control-constructor__item-color.control-button.roof-color-grey(data-object-property="color__6")
+						.constructor-result
+							.result-img-wrapper
+								img(src="images/home_1x.jpg" alt="Крыша").result-constructor-img.roof-img
+								img(src="images/home_1x.jpg" alt="Кровля").result-constructor-img.roofing-img
+								img(src="images/home_1x.jpg" alt="Фасад").result-constructor-img.facade-img
+							.info-list-item-wrapper.info1
+								.info-icon
+									| <svg width="6px" height="12px" viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									|     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									|         <g transform="translate(-677.000000, -2200.000000)" fill="#FFFFFF" fill-rule="nonzero">
+									|             <g transform="translate(670.000000, 2196.000000)">
+									|                 <g transform="translate(7.500000, 4.000000)">
+									|                     <path d="M1.31687243,0.993690852 C1.31687243,0.72239612 1.41975206,0.488959968 1.6255144,0.293375394 C1.83127675,0.0977908202 2.0850465,0 2.38683128,0 C2.6817573,0 2.9338124,0.0962135489 3.14300412,0.288643533 C3.35219583,0.481073517 3.45679012,0.71608694 3.45679012,0.993690852 C3.45679012,1.26498558 3.35219583,1.49684446 3.14300412,1.68927445 C2.9338124,1.88170443 2.6817573,1.97791798 2.38683128,1.97791798 C2.0850465,1.97791798 1.83127675,1.88170443 1.6255144,1.68927445 C1.41975206,1.49684446 1.31687243,1.26498558 1.31687243,0.993690852 Z M-4.08562073e-12,11.075697 C0.7338857,11.0126052 1.19684403,10.8974644 1.38888889,10.7302711 C1.58093374,10.5630779 1.67695473,10.3458096 1.67695473,9.60763558 L1.67695473,5.51735016 C1.67695473,5.10725347 1.64609084,4.82334464 1.58436214,4.66561514 C1.48148097,4.40693877 1.09931868,4.19202474 0.0925925926,4.19202474 L0.0925925926,3.23659306 L3.43621399,3.23659306 L3.43621399,9.60763558 C3.43621399,10.3268821 3.53052032,10.5425731 3.7191358,10.7255393 C3.90775129,10.9085055 4.33470175,11.0252236 5,11.075697 L5,12 L-8.63309424e-12,12 L-4.08562073e-12,11.075697 Z"></path>
+									|                 </g>
+									|             </g>
+									|         </g>
+									|     </g>
+									| </svg>
+								.info-content-wrapper
+									.button-close-info
+										| <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										|         <g transform="translate(-759.000000, -287.000000)" fill="#4B4C51" fill-rule="nonzero" stroke="#4B4C51" stroke-width="0.5">
+										|             <g>
+										|                 <g transform="translate(416.000000, 272.000000)">
+										|                     <g transform="translate(344.000000, 16.000000)">
+										|                         <path d="M4.54258957,3.99993608 L7.88762106,0.65495805 C8.03745965,0.505121854 8.03745965,0.262213344 7.88762106,0.112377147 C7.73778247,-0.0374590491 7.49487007,-0.0374590491 7.34503148,0.112377147 L4,3.45735517 L0.654968517,0.112888534 C0.505129926,-0.0369476628 0.262217534,-0.0369476628 0.112378943,0.112888534 C-0.0374596478,0.26272473 -0.0374596478,0.50563324 0.112378943,0.655469437 L3.45741043,4.00044746 L0.112890338,7.3449141 C-0.0369482533,7.4947503 -0.0369482533,7.73765881 0.112890338,7.88749501 C0.188065331,7.96215741 0.285741682,8 0.383929428,8 C0.482117173,8 0.580304919,7.9626688 0.654968517,7.88749501 L4,4.54251698 L7.34503148,7.88749501 C7.42020648,7.96215741 7.51788283,8 7.61607057,8 C7.71425832,8 7.81244606,7.9626688 7.88710966,7.88749501 C8.03694825,7.73765881 8.03694825,7.4947503 7.88710966,7.3449141 L4.54258957,3.99993608 Z"></path>
+										|                     </g>
+										|                 </g>
+										|             </g>
+										|         </g>
+										|     </g>
+										| </svg>
+									.info-content-title Дополнительные материалы для&nbsp;отделки крыши
+									ul.info-content-list.custom-scroll
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials1_1x.webp 1x, images/roof-materials1_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials1_1x.jpg" srcset="images/roof-materials1_1x.jpg 1x, images/roof-materials1_2x.jpg 2x" alt="Конёк прямой")
+											.info-img-text Конёк прямой
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials2_1x.webp 1x, images/roof-materials2_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials2_1x.jpg" srcset="images/roof-materials2_1x.jpg 1x, images/roof-materials2_2x.jpg 2x" alt="Конёк фигурный")
+											.info-img-text Конёк фигурный
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials3_1x.webp 1x, images/roof-materials3_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials3_1x.jpg" srcset="images/roof-materials3_1x.jpg 1x, images/roof-materials3_2x.jpg 2x" alt="Конёк каскад")
+											.info-img-text Конёк каскад
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials4_1x.webp 1x, images/roof-materials4_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials4_1x.jpg" srcset="images/roof-materials4_1x.jpg 1x, images/roof-materials4_2x.jpg 2x" alt="Заглушка прямая")
+											.info-img-text Заглушка прямая
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials4_1x.webp 1x, images/roof-materials4_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials4_1x.jpg" srcset="images/roof-materials4_1x.jpg 1x, images/roof-materials4_2x.jpg 2x" alt="Заглушка фигурная")
+											.info-img-text Заглушка фигурная
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials4_1x.webp 1x, images/roof-materials4_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials4_1x.jpg" srcset="images/roof-materials4_1x.jpg 1x, images/roof-materials4_2x.jpg 2x" alt="Заглушка каскад")
+											.info-img-text Заглушка каскад
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials1_1x.webp 1x, images/roof-materials1_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials1_1x.jpg" srcset="images/roof-materials1_1x.jpg 1x, images/roof-materials1_2x.jpg 2x" alt="Конёк прямой")
+											.info-img-text Конёк прямой
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials2_1x.webp 1x, images/roof-materials2_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials2_1x.jpg" srcset="images/roof-materials2_1x.jpg 1x, images/roof-materials2_2x.jpg 2x" alt="Конёк фигурный")
+											.info-img-text Конёк фигурный
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/roof-materials3_1x.webp 1x, images/roof-materials3_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/roof-materials3_1x.jpg" srcset="images/roof-materials3_1x.jpg 1x, images/roof-materials3_2x.jpg 2x" alt="Конёк каскад")
+											.info-img-text Конёк каскад
+							.info-list-item-wrapper.info2
+								.info-icon
+									| <svg width="6px" height="12px" viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									|     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									|         <g transform="translate(-677.000000, -2200.000000)" fill="#FFFFFF" fill-rule="nonzero">
+									|             <g transform="translate(670.000000, 2196.000000)">
+									|                 <g transform="translate(7.500000, 4.000000)">
+									|                     <path d="M1.31687243,0.993690852 C1.31687243,0.72239612 1.41975206,0.488959968 1.6255144,0.293375394 C1.83127675,0.0977908202 2.0850465,0 2.38683128,0 C2.6817573,0 2.9338124,0.0962135489 3.14300412,0.288643533 C3.35219583,0.481073517 3.45679012,0.71608694 3.45679012,0.993690852 C3.45679012,1.26498558 3.35219583,1.49684446 3.14300412,1.68927445 C2.9338124,1.88170443 2.6817573,1.97791798 2.38683128,1.97791798 C2.0850465,1.97791798 1.83127675,1.88170443 1.6255144,1.68927445 C1.41975206,1.49684446 1.31687243,1.26498558 1.31687243,0.993690852 Z M-4.08562073e-12,11.075697 C0.7338857,11.0126052 1.19684403,10.8974644 1.38888889,10.7302711 C1.58093374,10.5630779 1.67695473,10.3458096 1.67695473,9.60763558 L1.67695473,5.51735016 C1.67695473,5.10725347 1.64609084,4.82334464 1.58436214,4.66561514 C1.48148097,4.40693877 1.09931868,4.19202474 0.0925925926,4.19202474 L0.0925925926,3.23659306 L3.43621399,3.23659306 L3.43621399,9.60763558 C3.43621399,10.3268821 3.53052032,10.5425731 3.7191358,10.7255393 C3.90775129,10.9085055 4.33470175,11.0252236 5,11.075697 L5,12 L-8.63309424e-12,12 L-4.08562073e-12,11.075697 Z"></path>
+									|                 </g>
+									|             </g>
+									|         </g>
+									|     </g>
+									| </svg>
+								.info-content-wrapper
+									.button-close-info
+										| <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										|         <g transform="translate(-759.000000, -287.000000)" fill="#4B4C51" fill-rule="nonzero" stroke="#4B4C51" stroke-width="0.5">
+										|             <g>
+										|                 <g transform="translate(416.000000, 272.000000)">
+										|                     <g transform="translate(344.000000, 16.000000)">
+										|                         <path d="M4.54258957,3.99993608 L7.88762106,0.65495805 C8.03745965,0.505121854 8.03745965,0.262213344 7.88762106,0.112377147 C7.73778247,-0.0374590491 7.49487007,-0.0374590491 7.34503148,0.112377147 L4,3.45735517 L0.654968517,0.112888534 C0.505129926,-0.0369476628 0.262217534,-0.0369476628 0.112378943,0.112888534 C-0.0374596478,0.26272473 -0.0374596478,0.50563324 0.112378943,0.655469437 L3.45741043,4.00044746 L0.112890338,7.3449141 C-0.0369482533,7.4947503 -0.0369482533,7.73765881 0.112890338,7.88749501 C0.188065331,7.96215741 0.285741682,8 0.383929428,8 C0.482117173,8 0.580304919,7.9626688 0.654968517,7.88749501 L4,4.54251698 L7.34503148,7.88749501 C7.42020648,7.96215741 7.51788283,8 7.61607057,8 C7.71425832,8 7.81244606,7.9626688 7.88710966,7.88749501 C8.03694825,7.73765881 8.03694825,7.4947503 7.88710966,7.3449141 L4.54258957,3.99993608 Z"></path>
+										|                     </g>
+										|                 </g>
+										|             </g>
+										|         </g>
+										|     </g>
+										| </svg>
+									.info-content-title Дополнительные материалы для&nbsp;отделки фасада
+									ul.info-content-list.custom-scroll
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials1_1x.webp 1x, images/facade-materials1_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials1_1x.jpg" srcset="images/facade-materials1_1x.jpg 1x, images/facade-materials1_2x.jpg 2x" alt="Соединяющая рейка")
+											.info-img-text Соединяющая рейка
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials2_1x.webp 1x, images/facade-materials2_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials2_1x.jpg" srcset="images/facade-materials2_1x.jpg 1x, images/facade-materials2_2x.jpg 2x" alt="Отлив")
+											.info-img-text Отлив
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials3_1x.webp 1x, images/facade-materials3_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials3_1x.jpg" srcset="images/facade-materials3_1x.jpg 1x, images/facade-materials3_2x.jpg 2x" alt="Наличник")
+											.info-img-text Наличник
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials4_1x.webp 1x, images/facade-materials4_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials4_1x.jpg" srcset="images/facade-materials4_1x.jpg 1x, images/facade-materials4_2x.jpg 2x" alt="Внутренний угол")
+											.info-img-text Внутренний угол
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials5_1x.webp 1x, images/facade-materials5_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials5_1x.jpg" srcset="images/facade-materials5_1x.jpg 1x, images/facade-materials5_2x.jpg 2x" alt="Наружный угол")
+											.info-img-text Наружный угол
+										li.info-content-list__item
+											picture.info-img-wrapper
+												source(srcset="images/facade-materials6_1x.webp 1x, images/facade-materials6_2x.webp 2x" type="image/webp")
+												img.info-img(src="images/facade-materials6_1x.jpg" srcset="images/facade-materials6_1x.jpg 1x, images/facade-materials6_2x.jpg 2x" alt="Внутренний и наружный угол")
+											.info-img-text Внутренний и наружный угол
+							.btn-calculate-wrapper
+								a(href="#calculator-form").btn.btn-calculate Рассчитать стоимость
 			section.products
 				.title-wrapper
 					h2.main-h2.main-h2_small Более 10&nbsp;000 видов строительных материалов
@@ -91,3 +329,4 @@ block content
 					+map
 	+footer
 	+callback-block
+	+cost-calculator-form

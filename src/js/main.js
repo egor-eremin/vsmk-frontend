@@ -98,25 +98,23 @@ $(document).ready(function () {
                 open: function () {
                     var windowCoordinate = closeMobileMenu();
 
-                    console.log(windowCoordinate);
                     $('html').css({'overflow':'hidden', 'position': 'fixed', 'top': '' + (-windowCoordinate) + ''});
                     $('.callback__phone-input').focus();
                     if ($('.main-header').hasClass('open-mobile-menu')) {
-                        console.log('open');
                         $('.mfp-wrap.callback-form-wrapper').css('top', '' + (-windowCoordinate) + 'px');
                         $(window).scrollTop(-windowCoordinate);
                     };
                 },
                 close: function () {
                     var htmlCoordinate = $('html').css('top');
+                    var thisForm = this.items["0"].src;
 
-                    console.log('close');
                     $('html').removeAttr('style');
                     $(window).scrollTop(-htmlCoordinate);
-                    if ($('.form-answer').hasClass('show-information')) {
-                      $('.form-input').val('');
-                      $('.callback-form__wrapper').removeClass('hide-information');
-                      $('.form-answer').removeClass('show-information');
+                    if ($('' + thisForm + ' .form-answer').hasClass('show-information')) {
+                        $('' + thisForm + ' .form-input').val('');
+                      $('' + thisForm + ' .callback-form__wrapper').removeClass('hide-information');
+                      $('' + thisForm + ' .form-answer').removeClass('show-information');
                   };
 
               }
@@ -124,7 +122,7 @@ $(document).ready(function () {
         });
     })();
     (function validateCallbackForm() {
-        validationForm('.callback','.callback-form__wrapper','.form-answer', true);
+        validationForm('#callback-form','#callback-form .callback-form__wrapper','#callback-form .form-answer', true);
     })();
     (function fixedMenu() {
         var coordinateMenu = $('.header-wrapper').offset().top;
@@ -152,17 +150,299 @@ $(document).ready(function () {
            }
         });
     })();
-    (function calculationHeight() {
-        // window.addEventListener('onorientationchange', calcVH, true);
-        // window.addEventListener('resize', calcVH, true);
+    (function addedTabs() {
+        addTabs('.constructor-tabbed');
     })();
+    (function openInfo() {
+        $('.info-icon').on('click', function () {
+            var thisWrapper = $(this).next('.info-content-wrapper');
 
+            if (!thisWrapper.hasClass('active')) {
+                $('.info-content-wrapper').removeClass('active');
+                $('.info-content-wrapper').fadeOut(300);
+                thisWrapper.addClass('active');
+                thisWrapper.fadeIn(300);
+            } else {
+                thisWrapper.removeClass('active');
+                thisWrapper.fadeOut(300);
+            }
+
+        });
+    })();
+    (function closeInfo() {
+        $('.button-close-info').on('click', function () {
+           $(this).parent('.info-content-wrapper').fadeOut(300);
+        });
+        $(document).mouseup(function (e) {
+            var infoContainer = $(".info-content-wrapper");
+            var infoIcon = $('.info-icon');
+            if (infoContainer.has(e.target).length === 0 && infoIcon.has(e.target).length === 0){
+                infoContainer.fadeOut(300);
+            }
+        });
+    })();
+    (function initCostCalculationForm() {
+        $('.btn-calculate').magnificPopup({
+            type: 'inline',
+            focus: '.callback__phone-input',
+            mainClass: 'callback-form-wrapper',
+            removalDelay: 250,
+            callbacks: {
+                open: function () {
+                    var windowCoordinate = closeMobileMenu();
+
+                    $('html').css({'overflow': 'hidden', 'position': 'fixed', 'top': '' + (-windowCoordinate) + ''});
+                    $('.callback__phone-input').focus();
+                    if ($('.main-header').hasClass('open-mobile-menu')) {
+                        $('.mfp-wrap.callback-form-wrapper').css('top', '' + (-windowCoordinate) + 'px');
+                        $(window).scrollTop(-windowCoordinate);
+                    }
+                    ;
+                },
+                close: function () {
+                    var htmlCoordinate = $('html').css('top');
+                    var thisForm = this.items["0"].src;
+
+                    $('html').removeAttr('style');
+                    $(window).scrollTop(-htmlCoordinate);
+                    if ($('' + thisForm + ' .form-answer').hasClass('show-information')) {
+                        $('' + thisForm + ' .form-input').val('');
+                        $('' + thisForm + ' .callback-form__wrapper').removeClass('hide-information');
+                        $('' + thisForm + ' .form-answer').removeClass('show-information');
+                    }
+                    ;
+
+                }
+            },
+        })
+    })();
+    (function validateCostCalculationForm() {
+        validationForm('#calculator-form','#calculator-form .callback-form__wrapper','#calculator-form .form-answer', true);
+    })();
+    (function switchedConstructorImg() {
+        let constructorImages = {
+            roof: {
+                view: {
+                    view__1: "images/home_1x.jpg",
+                    view__2: "images/home_1x.jpg",
+                    view__3: "images/home_1x.jpg",
+                    view__4: "images/home_1x.jpg",
+                    view__5: "images/home_1x.jpg",
+                }
+            },
+            roofing: {
+                material: {
+                    material__1: {
+                        shape: {
+                            shape__1: {
+                                color: {
+                                    color__1: 'images/home_1x.jpg',
+                                    color__2: 'images/home_1x.jpg',
+                                    color__3: 'images/home_1x.jpg',
+                                    color__4: 'images/home_1x.jpg',
+                                    color__5: 'images/home_1x.jpg',
+                                    color__6: 'images/home_1x.jpg',
+                                }
+                            },
+                            shape__2: {
+                                color: {
+                                    color__1: 'images/home_1x.jpg',
+                                    color__2: 'images/home_1x.jpg',
+                                    color__3: 'images/home_1x.jpg',
+                                    color__4: 'images/home_1x.jpg',
+                                    color__5: 'images/home_1x.jpg',
+                                    color__6: 'images/home_1x.jpg',
+                                }
+                            }
+                        }
+                    },
+                    material__2: {
+                        shape: {
+                            shape__1: {
+                                color: {
+                                    color__1: 'images/home_1x.jpg',
+                                    color__2: 'images/home_1x.jpg',
+                                    color__3: 'images/home_1x.jpg',
+                                    color__4: 'images/home_1x.jpg',
+                                    color__5: 'images/home_1x.jpg',
+                                    color__6: 'images/home_1x.jpg',
+                                }
+                            },
+                            shape__2: {
+                                color: {
+                                    color__1: 'images/home_1x.jpg',
+                                    color__2: 'images/home_1x.jpg',
+                                    color__3: 'images/home_1x.jpg',
+                                    color__4: 'images/home_1x.jpg',
+                                    color__5: 'images/home_1x.jpg',
+                                    color__6: 'images/home_1x.jpg',
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            facade: {
+                material: {
+                    material__1: {
+                        shape: {
+                            shape__1: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                            shape__2: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                            shape__3: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                        }
+                    },
+                    material__2: {
+                        shape: {
+                            shape__1: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                            shape__2: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                            shape__3: {
+                                color: {
+                                    color__1: "images/home_1x.jpg",
+                                    color__2: "images/home_1x.jpg",
+                                    color__3: "images/home_1x.jpg",
+                                    color__4: "images/home_1x.jpg",
+                                    color__5: "images/home_1x.jpg",
+                                    color__6: "images/home_1x.jpg",
+                                }
+                            },
+                        }
+                    }
+                }
+            }
+        };
+
+        $('.section-tabs-controls').each(function (index, item) {
+            var tier = $(item).data('object-property');
+            var thisControlsItem = $(item).find('.control-constructor');
+
+            console.log(thisControlsItem);
+            // $('.control-constructor').each(function (i, e) {
+            //
+            // })
+        });
+        switchedActiveControls();
+    })();
+    (function startConstructor() {
+        $('.btn-start-constructor').on('click', function () {
+           $('.constructor-first-page').fadeOut(300);
+           setTimeout(function () {
+               $('.constructor-start-page').css({opacity: 0, display: 'flex'}).animate({
+                   opacity: 1
+               }, 300);
+           }, 300);
+
+        });
+    })();
     media('(min-width: 780px)', function () {
         closeMobileMenu();
     });
 });
 
 
+function switchedActiveControls() {
+  $('.control-button').on('click', function () {
+      var thisWrapper = $(this).parent('.control-constructor');
+
+      if (!$(this).hasClass('active')) {
+          thisWrapper.find('.control-button').removeClass('active');
+          $(this).addClass('active')
+      }
+  });
+};
+function addTabs(tabbed_selector) {
+    var tabbed = document.querySelector(tabbed_selector);
+    var tablist = tabbed.querySelector('ul');
+    var tabs = tablist.querySelectorAll('a');
+    var panels = tabbed.querySelectorAll('[id^="section"]');
+    var switchTab = function switchTab(oldTab, newTab) {
+        newTab.focus();
+        newTab.removeAttribute('tabindex');
+        newTab.setAttribute('aria-selected', 'true');
+        oldTab.removeAttribute('aria-selected');
+        oldTab.setAttribute('tabindex', '-1');
+        var index = Array.prototype.indexOf.call(tabs, newTab);
+        var oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
+        panels[oldIndex].hidden = true;
+        panels[index].hidden = false;
+    };
+    tablist.setAttribute('role', 'tablist');
+    Array.prototype.forEach.call(tabs, function (tab, i) {
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('id', 'tab' + (i + 1));
+        tab.setAttribute('tabindex', '-1');
+        tab.parentNode.setAttribute('role', 'presentation');
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+            var currentTab = tablist.querySelector('[aria-selected]');
+            if (e.currentTarget !== currentTab) {
+                switchTab(currentTab, e.currentTarget);
+            }
+        });
+        tab.addEventListener('keydown', function (e) {
+            var index = Array.prototype.indexOf.call(tabs, e.currentTarget);
+            var dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? 'down' : null;
+            if (dir !== null) {
+                e.preventDefault();
+                dir === 'down' ? panels[i].focus() : tabs[dir] ? switchTab(e.currentTarget, tabs[dir]) : void 0;
+            }
+        });
+    });
+    Array.prototype.forEach.call(panels, function (panel, i) {
+        panel.setAttribute('role', 'tabpanel');
+        panel.setAttribute('tabindex', '-1');
+        var id = panel.getAttribute('id');
+        panel.setAttribute('aria-labelledby', tabs[i].id);
+        panel.hidden = true;
+    });
+    tabs[0].removeAttribute('tabindex');
+    tabs[0].setAttribute('aria-selected', 'true');
+    panels[0].hidden = false;
+}
 function openMobileMenu(coordinateWindow) {
     $('.burger-mobile').addClass('active');
     $('.main-header').addClass('open-mobile-menu');
