@@ -1,6 +1,7 @@
 .idea/
 bower_components/
 node_modules/
+build/
 zip/
 .DS_Store
 aero-debug.log
